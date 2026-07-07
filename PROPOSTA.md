@@ -79,7 +79,7 @@ Rodapé             → contatos, redes, CNPJ, link LGPD
 
 ## 3. Wireframe comentado (seção a seção)
 
-O mockup em `mockup/index.html` implementa exatamente esta estrutura. Racional de cada seção:
+O mockup em `mockup/index.html` implementa esta estrutura já com o posicionamento MEL do [BENCHMARKING-MEL.md](BENCHMARKING-MEL.md): herói com a fórmula do setor, as 4 linhas de serviço clássicas, método como ciclo de MEL, seção "Para quem" e "Aprendizados" (publicações). O primeiro estudo genérico foi preservado em `mockup/v1-generico.html`. Racional de cada seção:
 
 | Seção | Objetivo | Conteúdo (a definir com você) |
 |---|---|---|
