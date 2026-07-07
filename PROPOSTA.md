@@ -21,6 +21,8 @@
 
 ## 2. Benchmarking
 
+> **Complemento setorial:** ver [BENCHMARKING-MEL.md](BENCHMARKING-MEL.md) — pesquisa de consultorias de monitoramento, avaliação e aprendizagem (MEL/MEAL) no Brasil e no mundo, com padrões de posicionamento do campo e implicações diretas para o herói, os serviços e a prova social deste site.
+
 ### 2.1 O que os melhores sites de consultoria têm em comum
 
 Analisando guias e curadorias recentes de sites de consultores e consultorias (Consulting Success, Sitebuilder Report, Freelancecake, Framer, Colorlib, Wix, e curadorias brasileiras como Task, Aurago e Vale da Web), os padrões que se repetem nos sites que geram clientes são:
