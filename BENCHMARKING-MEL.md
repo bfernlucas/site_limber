@@ -48,6 +48,7 @@ Em ambos os polos, a moeda de credibilidade é a mesma: **evidência + aprendiza
 | [NIRAS](https://www.niras.com/sectors/development-consulting/monitoring-evaluation-and-learning/) (Dinamarca) | 1.400+ projetos de MEL, 120 especialistas próprios | Prova social por números logo na página de serviço |
 | [INTRAC](https://www.intrac.org/consultancy/monitoring-evaluation-and-learning/) (Reino Unido) | MEL para sociedade civil desde 1991 | Nicho por tipo de cliente (OSCs) — paralelo direto com o campo social brasileiro |
 | [Khulisa](https://khulisa.com/) (África do Sul) | M&E, pesquisa e qualidade de dados; 25 países | Boutique que cresceu mantendo foco técnico |
+| [J-PAL](https://www.povertyactionlab.org/) (MIT, global) | Laboratório de avaliações aleatorizadas; "evidência → política" com rede de 1.000+ pesquisadores | Referência estrutural adotada no mockup: organização por **11 setores**, banco público de **avaliações** e **policy insights**, números de impacto rotulados, formação e newsletters como canal central |
 
 **Leitura do polo internacional:** todos os taglines seguem a mesma fórmula — **[transformação social] por meio de [evidência/dados/aprendizagem]**. Nenhum vende "relatórios de avaliação"; todos vendem decisão melhor e aprendizado. A prova social tem três camadas: logos de financiadores, números de projetos/países e **publicações abertas** (a seção "Insights/Publications" existe em praticamente todos — no campo MEL, compartilhar conhecimento é o principal sinal de senioridade).
 
@@ -104,6 +105,8 @@ Ajustes que este benchmarking sugere sobre a estrutura já proposta em [PROPOSTA
 | Prova social | Logos de organizações atendidas + nº de avaliações/projetos + participação em redes do setor |
 | FAQ | Objeções típicas do campo: quali vs. quanti, avaliação externa vs. interna, porte mínimo de projeto, ética e LGPD na coleta de dados |
 | Fase 2 | Seção "Publicações/Aprendizados" — no campo MEL isso é o principal sinal de senioridade; começar cedo, mesmo com 2–3 itens |
+
+**Elementos estruturais do J-PAL incorporados ao mockup** (a pedido, como segunda camada de referência): seção de **setores de atuação** (espelho da organização por 11 setores do J-PAL), transformação de "Aprendizados" em **hub de evidências com filtros por tipo** (mini-versão do banco de avaliações/policy insights), rótulo "nosso trabalho em números" no bloco de estatísticas e **newsletter** no pé de página — no J-PAL, as newsletters são canal central de relacionamento.
 
 **Oportunidade de posicionamento:** nenhuma consultoria brasileira "domina" o vocabulário *monitoramento, avaliação e aprendizagem* como marca — as referências usam "avaliação de impacto" ou "pesquisa". Apresentar a Limber explicitamente como consultoria de **MEL/MEAL em português claro** ocupa um espaço vago e alinhado ao vocabulário que financiadores internacionais e grandes fundações já usam.
 

@@ -17,6 +17,12 @@
   - Prova social em 3 camadas: números, organizações, publicações
   - Seção de aprendizados/publicações (sinal de senioridade no campo)
   - FAQ com objeções típicas do setor (quali vs quanti, LGPD, porte, externa vs interna)
+
+  Elementos inspirados na estrutura do J-PAL (povertyactionlab.org):
+  - Organização por SETORES de atuação (J-PAL estrutura tudo em 11 setores)
+  - Hub de evidências com filtros (mini-versão do banco de avaliações/policy insights)
+  - Números de impacto rotulados ("nosso trabalho em números")
+  - Newsletter no pé de página (J-PAL usa newsletters como canal central)
 -->
 <style>
   :root{
@@ -216,6 +222,48 @@
   .pub p{color:var(--muted);font-size:.9rem;flex:1}
   .pub a{font-size:.9rem;font-weight:700;color:var(--coral);text-decoration:none}
 
+  /* ===== Setores (estrutura J-PAL: organização por setor) ===== */
+  .sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  @media(max-width:860px){.sectors{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.sectors{grid-template-columns:1fr}}
+  .sector{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 18px;display:flex;flex-direction:column;gap:4px;
+  }
+  .sector b{font-size:.98rem;color:var(--navy);display:flex;align-items:center;gap:9px}
+  .sector b::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--teal);flex:none}
+  .sector:nth-child(odd) b::before{background:var(--coral)}
+  .sector small{color:var(--muted);font-size:.8rem;padding-left:19px}
+
+  /* ===== Hub de evidências (mini banco de avaliações à la J-PAL) ===== */
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 26px}
+  .filters button{
+    border:1.5px solid var(--line);background:var(--card);border-radius:999px;
+    padding:8px 18px;font-size:.88rem;font-weight:600;color:var(--muted);
+    cursor:pointer;font-family:inherit;transition:all .15s;
+  }
+  .filters button:hover{border-color:var(--navy);color:var(--navy)}
+  .filters button.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .pub .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .pub .tag-sector{
+    align-self:flex-start;font-size:.74rem;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--navy);border:1px solid var(--line);
+    border-radius:999px;padding:5px 12px;
+  }
+  .pub[hidden]{display:none}
+
+  /* ===== Newsletter (canal central no J-PAL) ===== */
+  .newsletter{background:var(--card);border-top:1px solid var(--line);padding:58px 0;margin-top:92px}
+  .newsletter .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .newsletter h3{font-size:1.35rem;margin-bottom:6px}
+  .newsletter p{color:var(--muted);font-size:.95rem;max-width:44ch}
+  .newsletter form{display:flex;gap:10px;flex-wrap:wrap}
+  .newsletter input{
+    padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;
+    font-size:.95rem;min-width:260px;background:var(--paper);font-family:inherit;
+  }
+  .newsletter input:focus{outline:2px solid var(--teal);border-color:transparent}
+
   /* ===== FAQ ===== */
   .faq details{border-bottom:1px solid var(--line);padding:22px 4px}
   .faq details:first-of-type{border-top:1px solid var(--line);margin-top:42px}
@@ -236,7 +284,7 @@
   .cta p{color:var(--on-dark-muted);margin:0 auto 32px;max-width:54ch}
 
   /* ===== Rodapé ===== */
-  footer.site{background:var(--navy);color:var(--on-dark-muted);padding:60px 0 120px;font-size:.9rem;margin-top:92px}
+  footer.site{background:var(--navy);color:var(--on-dark-muted);padding:60px 0 120px;font-size:.9rem}
   footer.site .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
   footer.site strong{color:#fff}
   footer.site a{color:var(--on-dark-muted)}
@@ -258,9 +306,10 @@
     <a class="logo" href="#">Limber<i>.</i></a>
     <ul>
       <li><a href="#servicos">O que fazemos</a></li>
+      <li><a href="#setores">Setores</a></li>
       <li><a href="#metodo">Como trabalhamos</a></li>
+      <li><a href="#evidencias">Evidências</a></li>
       <li><a href="#sobre">Quem somos</a></li>
-      <li><a href="#aprendizados">Aprendizados</a></li>
       <li><a href="#faq">Dúvidas</a></li>
     </ul>
     <a class="btn btn-coral" href="#contato">Agendar conversa</a>
@@ -292,8 +341,11 @@
     </div>
   </div>
 
-  <!-- PROVA SOCIAL: números do campo (placeholders) -->
+  <!-- PROVA SOCIAL: números rotulados, como o bloco de impacto do J-PAL -->
   <div class="proof">
+    <div class="wrap" style="margin-bottom:16px">
+      <span class="kicker">Nosso trabalho em números</span>
+    </div>
     <div class="wrap">
       <div class="stat"><b>+30<span>*</span></b> avaliações e estudos realizados</div>
       <div class="stat"><b>+20<span>*</span></b> organizações sociais atendidas</div>
@@ -314,6 +366,25 @@
       <span>Negócios de impacto</span>
       <span>Empresas com ISP/ESG</span>
       <span>Setor público</span>
+    </div>
+  </section>
+
+  <!-- SETORES: organização temática à la J-PAL (que estrutura tudo em 11 setores) -->
+  <section id="setores" class="wrap">
+    <span class="kicker">Setores de atuação</span>
+    <h2 class="title">Evidência com contexto: os temas onde já atuamos</h2>
+    <p class="lead">Cada setor tem suas métricas, seus atores e sua literatura. A experiência
+      setorial encurta o caminho entre a pergunta e o desenho certo. <em>[setores ilustrativos
+      — ajustar à trajetória real]</em></p>
+    <div class="sectors">
+      <div class="sector"><b>Educação</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Saúde</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Primeira infância</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Trabalho e renda</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Meio ambiente e clima</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Gênero e equidade racial</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Proteção social</b><small>[X] projetos</small></div>
+      <div class="sector"><b>Governança e participação</b><small>[X] projetos</small></div>
     </div>
   </section>
 
@@ -429,30 +500,55 @@
     </div>
   </section>
 
-  <!-- APRENDIZADOS: publicações = sinal de senioridade no campo MEL -->
-  <section id="aprendizados" class="wrap" style="padding-top:0">
-    <span class="kicker">Aprendizados</span>
+  <!-- HUB DE EVIDÊNCIAS: mini-versão do banco de avaliações/policy insights do J-PAL -->
+  <section id="evidencias" class="wrap" style="padding-top:0">
+    <span class="kicker">Evidências &amp; aprendizados</span>
     <h2 class="title">Conhecimento aberto, como manda o campo</h2>
     <p class="lead">O que aprendemos nos projetos vira material público — porque evidência
-      só cumpre seu papel quando circula.</p>
+      só cumpre seu papel quando circula. Filtre por tipo de material:</p>
+    <div class="filters" role="group" aria-label="Filtrar evidências por tipo">
+      <button class="active" data-filter="todos">Todos</button>
+      <button data-filter="avaliacao">Avaliações</button>
+      <button data-filter="caso">Estudos de caso</button>
+      <button data-filter="guia">Guias práticos</button>
+      <button data-filter="artigo">Artigos</button>
+    </div>
     <div class="pubs">
-      <div class="pub">
-        <span class="tag">Guia prático</span>
-        <h3>[Título de guia — ex.: indicadores que cabem em OSCs pequenas]</h3>
-        <p>Resumo em uma frase do que o material entrega. [placeholder]</p>
-        <a href="#">Baixar guia →</a>
+      <div class="pub" data-tags="avaliacao">
+        <span class="tags"><span class="tag">Avaliação de impacto</span><span class="tag-sector">Educação</span></span>
+        <h3>[Título — ex.: efeitos de programa de reforço escolar na aprendizagem]</h3>
+        <p>Pergunta avaliativa, método e principal achado em uma frase. [placeholder]</p>
+        <a href="#">Ver resumo →</a>
       </div>
-      <div class="pub">
-        <span class="tag">Estudo de caso</span>
-        <h3>[Título de caso — desafio → abordagem → resultado]</h3>
+      <div class="pub" data-tags="avaliacao">
+        <span class="tags"><span class="tag">Linha de base</span><span class="tag-sector">Trabalho e renda</span></span>
+        <h3>[Título — ex.: perfil de entrada dos participantes de programa de emprego]</h3>
+        <p>O que a linha de base revelou e como orientou o desenho. [placeholder]</p>
+        <a href="#">Ver resumo →</a>
+      </div>
+      <div class="pub" data-tags="caso">
+        <span class="tags"><span class="tag">Estudo de caso</span><span class="tag-sector">Primeira infância</span></span>
+        <h3>[Título — desafio → abordagem → resultado]</h3>
         <p>Resumo em uma frase do caso e do aprendizado. [placeholder]</p>
         <a href="#">Ler o caso →</a>
       </div>
-      <div class="pub">
-        <span class="tag">Artigo</span>
-        <h3>[Título de artigo — ex.: avaliação não é auditoria]</h3>
+      <div class="pub" data-tags="guia">
+        <span class="tags"><span class="tag">Guia prático</span><span class="tag-sector">Monitoramento</span></span>
+        <h3>[Título — ex.: indicadores que cabem em OSCs pequenas]</h3>
+        <p>Resumo em uma frase do que o material entrega. [placeholder]</p>
+        <a href="#">Baixar guia →</a>
+      </div>
+      <div class="pub" data-tags="artigo">
+        <span class="tags"><span class="tag">Artigo</span><span class="tag-sector">Campo de MEL</span></span>
+        <h3>[Título — ex.: avaliação não é auditoria]</h3>
         <p>Resumo em uma frase da tese do artigo. [placeholder]</p>
         <a href="#">Ler o artigo →</a>
+      </div>
+      <div class="pub" data-tags="avaliacao">
+        <span class="tags"><span class="tag">Avaliação de processo</span><span class="tag-sector">Saúde</span></span>
+        <h3>[Título — ex.: implementação de programa comunitário de saúde]</h3>
+        <p>O que funcionou na implementação e o que foi ajustado. [placeholder]</p>
+        <a href="#">Ver resumo →</a>
       </div>
     </div>
   </section>
@@ -502,6 +598,21 @@
     </div>
   </section>
 
+  <!-- NEWSLETTER: canal central na estrutura do J-PAL -->
+  <div class="newsletter">
+    <div class="wrap">
+      <div>
+        <h3>Evidência na sua caixa de entrada</h3>
+        <p>Uma vez por mês: aprendizados de projetos, métodos explicados em português claro
+          e novidades do campo de avaliação.</p>
+      </div>
+      <form onsubmit="return false" aria-label="Assinar newsletter">
+        <input type="email" placeholder="seu@email.org" aria-label="Seu e-mail">
+        <button class="btn btn-coral" type="submit">Assinar</button>
+      </form>
+    </div>
+  </div>
+
 </main>
 
 <footer class="site">
@@ -522,6 +633,20 @@
    href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Limber.">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.2 28l6.3-2c1.7.9 3.6 1.4 5.5 1.4 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.7 1.2 1.2-3.5-.3-.4c-1.2-1.6-1.9-3.6-1.9-5.6 0-5.3 4.5-9.7 10-9.7s10 4.4 10 9.7-4.5 9.8-10 9.8zm5.5-7.3c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
+
+<script>
+  // Filtro do hub de evidências (inspirado no banco de avaliações do J-PAL)
+  const filterBtns = document.querySelectorAll('.filters button');
+  const pubCards = document.querySelectorAll('.pub');
+  filterBtns.forEach(btn => btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    pubCards.forEach(card => {
+      card.hidden = f !== 'todos' && !card.dataset.tags.split(' ').includes(f);
+    });
+  }));
+</script>
 
 </body>
 </html>
