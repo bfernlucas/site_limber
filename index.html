@@ -12,7 +12,10 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Limber Social — medimos o que de fato mudou">
 <meta property="og:description" content="Pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais.">
-<meta property="og:image" content="assets/img/compartilhar.png">
+<meta property="og:url" content="https://bfernlucas.github.io/site_limber/">
+<meta property="og:image" content="https://bfernlucas.github.io/site_limber/assets/img/compartilhar.png">
+<link rel="alternate" hreflang="pt-BR" href="https://bfernlucas.github.io/site_limber/">
+<link rel="alternate" hreflang="en" href="https://bfernlucas.github.io/site_limber/en/">
 <link rel="icon" type="image/png" href="assets/img/monograma-violeta.png">
 <link rel="apple-touch-icon" href="assets/img/monograma-violeta.png">
 <link rel="preload" href="assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,13 +33,14 @@
 <header class="topo">
   <div class="miolo topo-linha">
     <a class="marca" href="#inicio" aria-label="Limber Social, início"><b>limber</b> social<i>.</i></a>
-    <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu" data-abrir="Menu" data-fechar="Fechar">Menu</button>
     <nav class="menu" id="menu" aria-label="Seções">
       <a href="#frentes">O que fazemos</a>
       <a href="#trabalhos">Trabalhos</a>
       <a href="#metodo">Método</a>
       <a href="#publicacoes">Publicações</a>
       <a href="#quem">Equipe</a>
+      <a class="idioma" href="en/" lang="en" hreflang="en">English</a>
       <a class="botao" href="#contato">Falar com a Limber</a>
     </nav>
   </div>
@@ -46,9 +50,9 @@
 
   <!-- ============ capa ============ -->
   <section class="capa" id="inicio">
-    <img class="capa-foto" src="assets/img/capa-parque-eolico-rn-1920.webp"
-         srcset="assets/img/capa-parque-eolico-rn-1100.webp 1100w, assets/img/capa-parque-eolico-rn-1920.webp 1920w" sizes="100vw"
-         width="1920" height="1200" alt="Vista aérea de aerogeradores sobre a vegetação do litoral do Rio Grande do Norte" fetchpriority="high">
+    <img class="capa-foto" src="assets/img/capa-semiarido-bahia-1600.webp"
+         srcset="assets/img/capa-semiarido-bahia-900.webp 900w, assets/img/capa-semiarido-bahia-1600.webp 1600w" sizes="100vw"
+         width="1600" height="1000" alt="Plantação de palma forrageira no Semiárido, com cisterna e casa ao fundo" fetchpriority="high">
     <div class="miolo capa-texto">
       <h1 class="titulo-1">Medimos o que de fato mudou</h1>
       <p class="lide">Pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais, com trabalho de campo no Norte e no Nordeste do Brasil.</p>
@@ -57,13 +61,13 @@
         <a class="link" href="#trabalhos">Ver os trabalhos da equipe</a>
       </div>
     </div>
-    <p class="capa-legenda">Parque eólico Cutia, Rio Grande do Norte. Foto: Copel</p>
+    <p class="capa-legenda">Cultivo de palma em Serra Preta, Bahia. Foto: Sergio Amaral, Ministério do Desenvolvimento Social</p>
   </section>
 
   <!-- ============ financiadores ============ -->
   <section class="quem-financia" aria-label="Financiadores">
     <div class="miolo quem-financia-grade">
-      <p>A equipe já avaliou e acompanhou programas financiados por</p>
+      <p>Financiadores de programas em que a equipe atuou, em contratos próprios ou em parceria com outras consultorias</p>
       <ul>
         <li>Banco Mundial</li>
         <li>Banco Interamericano de Desenvolvimento</li>
@@ -89,7 +93,7 @@
         <article class="frente">
           <h3 class="frente-nome">Pesquisa</h3>
           <p class="frente-promessa">Desenho amostral, instrumentos e linha de base.</p>
-          <p class="frente-descricao">Planejamos a amostra, escrevemos questionários e roteiros, treinamos a equipe e acompanhamos a coleta, com controle de qualidade desde o primeiro dia.</p>
+          <p class="frente-descricao">Planejamos a amostra, escrevemos questionários e roteiros, treinamos a equipe e acompanhamos a coleta. A linha de base é o retrato da situação antes de o programa começar.</p>
           <ul class="frente-metodos">
             <li>Questionários domiciliares</li>
             <li>Amostragem estratificada</li>
@@ -103,7 +107,7 @@
           <p class="frente-promessa">Indicadores e painéis para ajustar a rota cedo.</p>
           <p class="frente-descricao">Partimos da teoria da mudança para definir poucos indicadores que importam, montar a rotina de coleta e entregar painéis que a equipe usa.</p>
           <ul class="frente-metodos">
-            <li>Teoria da mudança</li>
+            <li>Teoria da mudança <span class="glosa">o caminho esperado entre as ações do programa e os resultados</span></li>
             <li>Matriz de indicadores</li>
             <li>Painéis interativos</li>
             <li>Mapas e análise de redes</li>
@@ -115,10 +119,10 @@
           <p class="frente-promessa">Inferência causal para medir o que de fato mudou.</p>
           <p class="frente-descricao">Escolhemos o desenho que os dados e o calendário do programa permitem e dizemos com clareza o que ele consegue afirmar.</p>
           <ul class="frente-metodos">
-            <li>Diferença em diferenças</li>
-            <li>Pareamento</li>
-            <li>Regressão descontínua</li>
-            <li>Retorno social do investimento</li>
+            <li>Diferença em diferenças <span class="glosa">compara a evolução de quem participou com a de um grupo parecido</span></li>
+            <li>Pareamento <span class="glosa">compara participantes e não participantes de perfil semelhante</span></li>
+            <li>Regressão descontínua <span class="glosa">compara quem ficou logo acima e logo abaixo do critério de entrada</span></li>
+            <li>Retorno social do investimento <span class="glosa">estima o valor social gerado por real investido</span></li>
           </ul>
         </article>
 
@@ -127,7 +131,7 @@
           <p class="frente-promessa">Evidência que vira decisão com as equipes.</p>
           <p class="frente-descricao">Devolvemos os achados em oficinas, sumários executivos e notas de política, e formamos as equipes para ler e produzir os próprios números.</p>
           <ul class="frente-metodos">
-            <li>Oficinas de devolutiva</li>
+            <li>Oficinas de devolutiva <span class="glosa">apresentação e discussão dos resultados com a equipe</span></li>
             <li>Sumários executivos</li>
             <li>Notas de política</li>
             <li>Formação em análise de dados</li>
@@ -149,7 +153,7 @@
         <article class="destaque">
           <figure class="destaque-foto">
             <img src="assets/img/manaus-igarape-1200.webp" srcset="assets/img/manaus-igarape-640.webp 640w, assets/img/manaus-igarape-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Igarapé canalizado entre duas vias, com casas à direita e prédios ao fundo">
-            <figcaption class="destaque-local">Igarapé do Mestre Chico, Manaus</figcaption>
+            <figcaption class="destaque-local"><span>Imagem ilustrativa:</span> Igarapé do Mestre Chico, Manaus</figcaption>
           </figure>
           <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2025–2026</span></p>
           <h3 class="titulo-3">PROSAMIN+, Manaus</h3>
@@ -160,7 +164,7 @@
         <article class="destaque">
           <figure class="destaque-foto">
             <img src="assets/img/maranhao-babacu-1200.webp" srcset="assets/img/maranhao-babacu-640.webp 640w, assets/img/maranhao-babacu-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Palmeiras de babaçu adultas e jovens em área rural">
-            <figcaption class="destaque-local">Babaçual no Maranhão</figcaption>
+            <figcaption class="destaque-local"><span>Imagem ilustrativa:</span> Babaçual no Maranhão</figcaption>
           </figure>
           <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2026</span></p>
           <h3 class="titulo-3">PAGES, Maranhão</h3>
@@ -170,8 +174,8 @@
 
         <article class="destaque">
           <figure class="destaque-foto">
-            <img src="assets/img/bahia-semiarido-1200.webp" srcset="assets/img/bahia-semiarido-640.webp 640w, assets/img/bahia-semiarido-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Plantação de palma forrageira com cisterna e casa ao fundo">
-            <figcaption class="destaque-local">Cultivo de palma em Serra Preta, Bahia</figcaption>
+            <img src="assets/img/bahia-caatinga-1023.webp" srcset="assets/img/bahia-caatinga-640.webp 640w, assets/img/bahia-caatinga-1023.webp 1023w" sizes="(max-width: 620px) 100vw, 50vw" width="1023" height="682" loading="lazy" alt="Colinas verdes da Caatinga na estação chuvosa, ao entardecer">
+            <figcaption class="destaque-local"><span>Imagem ilustrativa:</span> Caatinga na estação chuvosa, Bahia</figcaption>
           </figure>
           <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2022–2023</span></p>
           <h3 class="titulo-3">Bahia Produtiva</h3>
@@ -181,8 +185,8 @@
 
         <article class="destaque">
           <figure class="destaque-foto">
-            <img src="assets/img/rn-rio-do-fogo-1200.webp" srcset="assets/img/rn-rio-do-fogo-640.webp 640w, assets/img/rn-rio-do-fogo-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Estrada de terra em curva com fileira de aerogeradores ao fundo">
-            <figcaption class="destaque-local">Rio do Fogo, Rio Grande do Norte</figcaption>
+            <img src="assets/img/rn-parque-eolico-1200.webp" srcset="assets/img/rn-parque-eolico-640.webp 640w, assets/img/rn-parque-eolico-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Vista aérea de aerogeradores sobre a vegetação do litoral do Rio Grande do Norte">
+            <figcaption class="destaque-local"><span>Imagem ilustrativa:</span> Parque eólico Cutia, Rio Grande do Norte</figcaption>
           </figure>
           <p class="destaque-meta"><span class="selo selo-pesquisa">Pesquisa</span><span>2025–2026</span></p>
           <h3 class="titulo-3">Oportunidades para o Nordeste</h3>
@@ -202,134 +206,135 @@
             <button class="filtro" type="button" data-filtro="aprendizagem" aria-pressed="false">Aprendizagem</button>
           </div>
         </div>
-        <p class="contagem" id="contagem" aria-live="polite">19 trabalhos</p>
+        <p class="contagem" id="contagem" aria-live="polite" data-todos="{n} trabalhos" data-parcial="Mostrando {v} de {n} trabalhos">19 trabalhos</p>
 
-        <table class="trabalhos">
-          <thead>
-            <tr>
-              <th scope="col">Período</th>
-              <th scope="col">Trabalho</th>
-              <th scope="col">Financiador</th>
-              <th scope="col">Frente</th>
+        <table class="trabalhos" role="table">
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col" role="columnheader">Período</th>
+              <th scope="col" role="columnheader">Trabalho</th>
+              <th scope="col" role="columnheader">Financiador</th>
+              <th scope="col" role="columnheader">Frente</th>
             </tr>
           </thead>
-        <tbody>
-          <tr data-frente="pesquisa">
-            <td class="t-ano">2025–2026</td>
-            <th scope="row" class="t-nome"><strong>Plano Brasil Nordeste de Transformação Ecológica</strong><span>Incursões de campo nos estados, avaliação da carteira de iniciativas e estimativas de captação por eixo. <a class="link" href="https://consorcionordeste.gov.br/Plano_Brasil_Nordeste_PTE_DIGITAL.pdf?v=2025-11-10" rel="noopener">Ler o plano publicado</a></span></th>
-            <td class="t-fin">Consórcio Nordeste e Organização dos Estados Ibero-americanos</td>
-            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+        <tbody role="rowgroup">
+          <tr role="row" data-frente="pesquisa">
+            <td role="cell" class="t-ano">2025–2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Plano Brasil Nordeste de Transformação Ecológica</strong><span>Incursões de campo nos estados, avaliação da carteira de iniciativas e estimativas de captação por eixo. <a class="link" href="https://consorcionordeste.gov.br/Plano_Brasil_Nordeste_PTE_DIGITAL.pdf?v=2025-11-10" rel="noopener">Ler o plano publicado</a></span></th>
+            <td role="cell" class="t-fin">Consórcio Nordeste e Organização dos Estados Ibero-americanos</td>
+            <td role="cell" class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2026</td>
-            <th scope="row" class="t-nome"><strong>PAGES, Maranhão</strong><span>Estratégia de identificação causal por pareamento e plano amostral da linha de base com comunidades rurais.</span></th>
-            <td class="t-fin">Fundo Internacional de Desenvolvimento Agrícola</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>PAGES, Maranhão</strong><span>Estratégia de identificação causal por pareamento e plano amostral da linha de base com comunidades rurais.</span></th>
+            <td role="cell" class="t-fin">Fundo Internacional de Desenvolvimento Agrícola</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2025–2026</td>
-            <th scope="row" class="t-nome"><strong>PROSAMIN+, Manaus</strong><span>Avaliação de impacto e estudo longitudinal dos reassentamentos do programa de saneamento dos igarapés.</span></th>
-            <td class="t-fin">Banco Interamericano de Desenvolvimento e Governo do Amazonas</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2025–2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>PROSAMIN+, Manaus</strong><span>Avaliação de impacto e estudo longitudinal dos reassentamentos do programa de saneamento dos igarapés.</span></th>
+            <td role="cell" class="t-fin">Banco Interamericano de Desenvolvimento e Governo do Amazonas</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="monitoramento">
-            <td class="t-ano">2026</td>
-            <th scope="row" class="t-nome"><strong>Restauração de paisagens e uso sustentável da terra, Pará</strong><span>Sistemática de monitoramento e avaliação, formulários de coleta em campo e painéis de acompanhamento.</span></th>
-            <td class="t-fin">The Nature Conservancy Brasil</td>
-            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          <tr role="row" data-frente="monitoramento">
+            <td role="cell" class="t-ano">2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Restauração de paisagens e uso sustentável da terra, Pará</strong><span>Sistemática de monitoramento e avaliação, formulários de coleta em campo e painéis de acompanhamento.</span></th>
+            <td role="cell" class="t-fin">The Nature Conservancy Brasil</td>
+            <td role="cell" class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
           </tr>
-          <tr data-frente="pesquisa">
-            <td class="t-ano">2025–2026</td>
-            <th scope="row" class="t-nome"><strong>Oportunidades para o Nordeste</strong><span>35 entrevistas sobre a transição energética, matriz de sistematização, painéis de visualização e análise de redes. <a class="link" href="https://www.climateventures.co/programas/oportunidades-para-o-nordeste" rel="noopener">Conhecer o programa</a></span></th>
-            <td class="t-fin">Instituto Climate Ventures e Instituto Clima e Sociedade</td>
-            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          <tr role="row" data-frente="pesquisa">
+            <td role="cell" class="t-ano">2025–2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Oportunidades para o Nordeste</strong><span>35 entrevistas sobre a transição energética, matriz de sistematização, painéis de visualização e análise de redes. <a class="link" href="https://www.climateventures.co/programas/oportunidades-para-o-nordeste" rel="noopener">Conhecer o programa</a></span></th>
+            <td role="cell" class="t-fin">Instituto Climate Ventures e Instituto Clima e Sociedade</td>
+            <td role="cell" class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
-          <tr data-frente="pesquisa">
-            <td class="t-ano">2026</td>
-            <th scope="row" class="t-nome"><strong>Redes Ceará</strong><span>Diagnóstico socioterritorial sobre insegurança alimentar e inclusão produtiva no estado.</span></th>
-            <td class="t-fin">Redes Ceará</td>
-            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          <tr role="row" data-frente="pesquisa">
+            <td role="cell" class="t-ano">2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Redes Ceará</strong><span>Diagnóstico socioterritorial sobre insegurança alimentar e inclusão produtiva no estado.</span></th>
+            <td role="cell" class="t-fin">Redes Ceará</td>
+            <td role="cell" class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
-          <tr data-frente="aprendizagem">
-            <td class="t-ano">2026</td>
-            <th scope="row" class="t-nome"><strong>Trilha em Análise de Dados</strong><span>Curso de estatística aplicada para a equipe técnica, com o Laboratório de Métodos Quantitativos da Universidade Federal do Rio Grande do Norte.</span></th>
-            <td class="t-fin">Instituto para o Desenvolvimento do Investimento Social</td>
-            <td class="t-frente"><span class="selo selo-aprendizagem">Aprendizagem</span></td>
+          <tr role="row" data-frente="aprendizagem">
+            <td role="cell" class="t-ano">2026</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Trilha em Análise de Dados</strong><span>Curso de estatística aplicada para a equipe técnica, com o Laboratório de Métodos Quantitativos da Universidade Federal do Rio Grande do Norte.</span></th>
+            <td role="cell" class="t-fin">Instituto para o Desenvolvimento do Investimento Social</td>
+            <td role="cell" class="t-frente"><span class="selo selo-aprendizagem">Aprendizagem</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2025</td>
-            <th scope="row" class="t-nome"><strong>Newton Fund Brasil</strong><span>Estudo de caso nacional sobre os efeitos do fundo em pesquisa, inovação e cooperação internacional.</span></th>
-            <td class="t-fin">Governo do Reino Unido</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2025</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Newton Fund Brasil</strong><span>Estudo de caso nacional sobre os efeitos do fundo em pesquisa, inovação e cooperação internacional.</span></th>
+            <td role="cell" class="t-fin">Governo do Reino Unido</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2024</td>
-            <th scope="row" class="t-nome"><strong>Lagos do São Francisco</strong><span>Avaliação de retorno social do investimento, com coleta de dados primários.</span></th>
-            <td class="t-fin">Embrapa e Companhia Hidro Elétrica do São Francisco</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Lagos do São Francisco</strong><span>Avaliação de retorno social do investimento, com coleta de dados primários.</span></th>
+            <td role="cell" class="t-fin">Embrapa e Companhia Hidro Elétrica do São Francisco</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2024</td>
-            <th scope="row" class="t-nome"><strong>A União Faz a Vida</strong><span>Avaliação quase-experimental do programa de educação, com microdados do Sistema de Avaliação da Educação Básica.</span></th>
-            <td class="t-fin">Sicredi</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>A União Faz a Vida</strong><span>Avaliação quase-experimental do programa de educação, com microdados do Sistema de Avaliação da Educação Básica.</span></th>
+            <td role="cell" class="t-fin">Sicredi</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2024</td>
-            <th scope="row" class="t-nome"><strong>Coletivo Online</strong><span>Avaliação de impacto do projeto sobre a empregabilidade de jovens.</span></th>
-            <td class="t-fin">Instituto Coca-Cola Brasil</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Coletivo Online</strong><span>Avaliação de impacto do projeto sobre a empregabilidade de jovens.</span></th>
+            <td role="cell" class="t-fin">Instituto Coca-Cola Brasil</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="pesquisa">
-            <td class="t-ano">2024</td>
-            <th scope="row" class="t-nome"><strong>Um Milhão de Oportunidades</strong><span>Estudo sobre habilidades e empregos verdes para a juventude.</span></th>
-            <td class="t-fin">UNICEF Brasil</td>
-            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          <tr role="row" data-frente="pesquisa">
+            <td role="cell" class="t-ano">2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Um Milhão de Oportunidades</strong><span>Estudo sobre habilidades e empregos verdes para a juventude.</span></th>
+            <td role="cell" class="t-fin">UNICEF Brasil</td>
+            <td role="cell" class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
-          <tr data-frente="monitoramento">
-            <td class="t-ano">2024</td>
-            <th scope="row" class="t-nome"><strong>COOPAQ</strong><span>Sistema de monitoramento e avaliação da cooperativa, construído a partir da teoria da mudança.</span></th>
-            <td class="t-fin">COOPAQ</td>
-            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          <tr role="row" data-frente="monitoramento">
+            <td role="cell" class="t-ano">2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>COOPAQ</strong><span>Sistema de monitoramento e avaliação da cooperativa, construído a partir da teoria da mudança.</span></th>
+            <td role="cell" class="t-fin">COOPAQ</td>
+            <td role="cell" class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
           </tr>
-          <tr data-frente="monitoramento">
-            <td class="t-ano">2023–2024</td>
-            <th scope="row" class="t-nome"><strong>Programa SER</strong><span>Gestão, monitoramento e avaliação de iniciativas de desenvolvimento rural.</span></th>
-            <td class="t-fin">Neoenergia e Banco Nacional de Desenvolvimento Econômico e Social</td>
-            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          <tr role="row" data-frente="monitoramento">
+            <td role="cell" class="t-ano">2023–2024</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Programa SER</strong><span>Gestão, monitoramento e avaliação de iniciativas de desenvolvimento rural.</span></th>
+            <td role="cell" class="t-fin">Neoenergia e Banco Nacional de Desenvolvimento Econômico e Social</td>
+            <td role="cell" class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2022–2023</td>
-            <th scope="row" class="t-nome"><strong>Bahia Produtiva</strong><span>Avaliação de resultados do programa de desenvolvimento rural.</span></th>
-            <td class="t-fin">Banco Mundial e Governo da Bahia</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2022–2023</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Bahia Produtiva</strong><span>Avaliação de resultados do programa de desenvolvimento rural.</span></th>
+            <td role="cell" class="t-fin">Banco Mundial e Governo da Bahia</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2022</td>
-            <th scope="row" class="t-nome"><strong>Acesso Mais Seguro</strong><span>Análise quantitativa dos resultados do programa.</span></th>
-            <td class="t-fin">Comitê Internacional da Cruz Vermelha</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2022</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Acesso Mais Seguro</strong><span>Análise quantitativa dos resultados do programa.</span></th>
+            <td role="cell" class="t-fin">Comitê Internacional da Cruz Vermelha</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="avaliacao">
-            <td class="t-ano">2022</td>
-            <th scope="row" class="t-nome"><strong>No Clima da Caatinga</strong><span>Avaliação de práticas sustentáveis de conservação e restauração no bioma.</span></th>
-            <td class="t-fin">Petrobras Socioambiental</td>
-            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          <tr role="row" data-frente="avaliacao">
+            <td role="cell" class="t-ano">2022</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>No Clima da Caatinga</strong><span>Avaliação de práticas sustentáveis de conservação e restauração no bioma.</span></th>
+            <td role="cell" class="t-fin">Petrobras Socioambiental</td>
+            <td role="cell" class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
           </tr>
-          <tr data-frente="monitoramento">
-            <td class="t-ano">2020–2023</td>
-            <th scope="row" class="t-nome"><strong>Organizações de Produtores para a América Latina</strong><span>Gestão e monitoramento do fortalecimento de organizações da agricultura familiar.</span></th>
-            <td class="t-fin">Fundo Internacional de Desenvolvimento Agrícola e União Europeia</td>
-            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          <tr role="row" data-frente="monitoramento">
+            <td role="cell" class="t-ano">2020–2023</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Organizações de Produtores para a América Latina</strong><span>Gestão e monitoramento do fortalecimento de organizações da agricultura familiar.</span></th>
+            <td role="cell" class="t-fin">Fundo Internacional de Desenvolvimento Agrícola e União Europeia</td>
+            <td role="cell" class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
           </tr>
-          <tr data-frente="pesquisa">
-            <td class="t-ano">2020</td>
-            <th scope="row" class="t-nome"><strong>Índice de Desenvolvimento Inclusivo para Cooperativas Solidárias</strong><span>Coordenação do índice que mede a inclusão de mulheres e jovens, publicado como Texto para Discussão do Ipea.</span></th>
-            <td class="t-fin">Trias</td>
-            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          <tr role="row" data-frente="pesquisa">
+            <td role="cell" class="t-ano">2020</td>
+            <th scope="row" role="rowheader" class="t-nome"><strong>Índice de Desenvolvimento Inclusivo para Cooperativas Solidárias</strong><span>Coordenação do índice que mede a inclusão de mulheres e jovens, publicado como Texto para Discussão do Ipea.</span></th>
+            <td role="cell" class="t-fin">Trias</td>
+            <td role="cell" class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
         </tbody>
         </table>
+        <button class="mostrar-todos" id="mostrar-todos" type="button" hidden>Mostrar todos os 19 trabalhos</button>
         <p class="trabalhos-nota">A lista reúne trabalhos conduzidos por integrantes da equipe. Parte deles foi executada em parceria com outras consultorias e organizações.</p>
       </div>
     </div>
@@ -385,10 +390,10 @@
         <p class="lide metodo-lide">Uma avaliação passa por cinco etapas. O plano de trabalho detalha os prazos de cada uma com quem contrata.</p>
         <ol class="etapas">
           <li class="etapa"><div><h3 class="titulo-3">Alinhamento</h3><p>Reunião de partida, leitura dos documentos do programa e perguntas de avaliação fechadas.</p></div></li>
-          <li class="etapa"><div><h3 class="titulo-3">Desenho</h3><p>Estratégia de identificação, amostragem e instrumentos, validados antes de ir a campo.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Desenho</h3><p>Estratégia para isolar o efeito do programa, amostragem e instrumentos, validados antes de ir a campo.</p></div></li>
           <li class="etapa"><div><h3 class="titulo-3">Campo</h3><p>Coleta com equipe treinada, supervisão diária e controle de qualidade dos dados.</p></div></li>
           <li class="etapa"><div><h3 class="titulo-3">Análise</h3><p>Estimação dos efeitos, testes de robustez e registro das limitações do estudo.</p></div></li>
-          <li class="etapa"><div><h3 class="titulo-3">Devolutiva</h3><p>Oficina com a equipe do programa, relatório final e sumário executivo com recomendações.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Devolutiva</h3><p>Apresentação e discussão dos resultados em oficina com a equipe do programa, relatório final e sumário executivo com recomendações.</p></div></li>
         </ol>
       </div>
     </div>
@@ -442,8 +447,12 @@
   <!-- ============ equipe ============ -->
   <section class="bloco faixa-neblina" id="quem">
     <div class="miolo duas">
-      <h2 class="titulo-2">Quem conduz o trabalho</h2>
       <div>
+        <h2 class="titulo-2">Quem conduz o trabalho</h2>
+        <p class="lide">Para cada trabalho, a Limber monta a equipe com pesquisadoras e pesquisadores associados em métodos quantitativos, pesquisa qualitativa e coordenação de campo.</p>
+      </div>
+      <div>
+        <!-- Retrato: quando houver a foto, incluir aqui <img class="pessoa-foto" src="assets/img/lucas-fernandes.webp" width="320" height="320" alt="Retrato de Lucas Fernandes"> -->
         <h3 class="pessoa-nome">Lucas Fernandes</h3>
         <p class="pessoa-papel">Sócio-administrador e responsável técnico</p>
         <div class="pessoa-bio">
@@ -454,7 +463,6 @@
           <a class="link" href="https://lucasfernandes-eco.github.io/" rel="noopener">Página acadêmica</a>
           <a class="link" href="https://www.linkedin.com/in/lucas-fernandes-0717b52b7/" rel="noopener">LinkedIn</a>
         </div>
-        <p class="pessoa-equipe">Para cada trabalho, a Limber monta a equipe com pesquisadoras e pesquisadores associados em métodos quantitativos, pesquisa qualitativa e coordenação de campo.</p>
       </div>
     </div>
   </section>
@@ -467,7 +475,9 @@
         <p class="lide">Conte o que você precisa avaliar, acompanhar ou pesquisar. Se já houver um termo de referência, pode enviar junto.</p>
       </div>
       <div>
-        <a class="botao botao-claro" href="mailto:limbersocial@gmail.com?subject=Contato%20pelo%20site%20da%20Limber%20Social">Escrever para limbersocial@gmail.com</a>
+        <a class="botao botao-claro" href="mailto:limbersocial@gmail.com?subject=Contato%20pelo%20site%20da%20Limber%20Social">Escrever um e-mail</a>
+        <p class="contato-endereco"><span>limbersocial@gmail.com</span> <button class="copiar" type="button" hidden data-copiar="limbersocial@gmail.com" data-sucesso="Endereço copiado" data-falha="Não foi possível copiar. Selecione o endereço e copie manualmente.">Copiar endereço</button></p>
+        <p class="contato-aviso" id="copiar-aviso" role="status"></p>
         <p class="contato-dado">Natal, Rio Grande do Norte</p>
       </div>
     </div>
@@ -495,11 +505,11 @@
     <div class="creditos">
       <h2>Créditos das imagens</h2>
       <ul>
-        <li>Parque eólico Cutia: Copel, <a href="https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br" rel="noopener license">CC0</a>.</li>
+        <li>Cultivo de palma em Serra Preta: Sergio Amaral, Ministério do Desenvolvimento Social, <a href="https://commons.wikimedia.org/wiki/File:Planta%C3%A7%C3%A3o_no_semi%C3%A1rido_(16077580847).jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.pt-br" rel="noopener license">CC BY-SA 2.0</a>.</li>
         <li>Igarapé do Mestre Chico: MI GENERAL ZAPATA, <a href="https://commons.wikimedia.org/wiki/File:Igarap%C3%A9_do_Mestre_Chico.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br" rel="noopener license">CC BY-SA 3.0</a>.</li>
         <li>Babaçual no Maranhão: Marcelo Cavallari, <a href="https://commons.wikimedia.org/wiki/File:A._speciosa_colonization.JPG" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="noopener license">CC BY-SA 4.0</a>.</li>
-        <li>Cultivo de palma em Serra Preta: Sergio Amaral, Ministério do Desenvolvimento Social, <a href="https://commons.wikimedia.org/wiki/File:Planta%C3%A7%C3%A3o_no_semi%C3%A1rido_(16077580847).jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.pt-br" rel="noopener license">CC BY-SA 2.0</a>.</li>
-        <li>Parque eólico de Rio do Fogo: Fabiogurgelamaral, <a href="https://commons.wikimedia.org/wiki/File:Parque_E%C3%B3lico_de_Rio_do_Fogo.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br" rel="noopener license">CC BY-SA 3.0</a>.</li>
+        <li>Caatinga na estação chuvosa: A. Duarte, <a href="https://commons.wikimedia.org/wiki/File:Caatinga_in_times_of_rain_Caatinga_em_tempos_de_chuva_(26242767640).jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.pt-br" rel="noopener license">CC BY-SA 2.0</a>.</li>
+        <li>Parque eólico Cutia: Copel, <a href="https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br" rel="noopener license">CC0</a>.</li>
         <li>Zona rural de Malta: UsuárioPar, <a href="https://commons.wikimedia.org/wiki/File:Por_do_Sol_na_Zona_Rural_de_Malta_PB.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="noopener license">CC BY-SA 4.0</a>.</li>
         <li>As imagens foram recortadas e tiveram a cor ajustada. As fotografias ilustram os territórios e não são registros dos trabalhos listados.</li>
       </ul>
