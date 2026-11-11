@@ -44,9 +44,9 @@ Plan Eval, pelo material institucional: 43 países desde 2007, escritórios em S
 
 | Padrão do setor | Escolha para a Limber | Por quê |
 |---|---|---|
-| Frase de missão e contadores grandes | Um gráfico de contrafactual desenhado na primeira dobra | Nenhum dos oito sites mostra o método. Para uma consultoria cuja identidade é inferência causal, o método é a imagem mais característica, e a Limber ainda não tem contadores grandes para exibir. |
+| Frase de missão e contadores grandes | Fotografia de território na capa e um gráfico de contrafactual na seção de método | Nenhum dos oito sites mostra o método. Para uma consultoria cuja identidade é inferência causal, o gráfico é uma prova técnica, e a Limber ainda não tem contadores grandes para exibir. |
 | Parede de logotipos | Lista tipográfica de financiadores | Evita uso de marcas de terceiros sem autorização e deixa claro que são programas avaliados, não clientes diretos. |
-| Cartões de caso com foto | Tabela de trabalhos filtrável por frente | Mostra volume e variedade com honestidade, lembra uma tabela de artigo e dispensa banco de imagens. |
+| Cartões de caso com foto | Quatro destaques com fotografia do território e, abaixo, a tabela completa filtrável por frente | Os destaques dão rosto ao portfólio; a tabela mostra volume e variedade com honestidade. |
 | Blog institucional | Publicações acadêmicas com revisão de pares | A Limber já tem esse material; é o diferencial frente às consultorias sem produção científica. |
 | Institucional genérico | Território declarado: Norte, Nordeste e Semiárido | Especialização declarada vende (Plano CDE faz isso com o público; a Limber faz com o território e o método). |
 | Só português | Português agora, inglês na fase seguinte | Financiadores multilaterais leem em inglês; Plano CDE, IDinsight e Laterite já são bilíngues. |
@@ -58,6 +58,7 @@ Plan Eval, pelo material institucional: 43 países desde 2007, escritórios em S
 - Portfólio apresentado por financiador e programa, com nota de que parte dos trabalhos foi executada em parceria com outras consultorias.
 - Equipe: apenas o responsável técnico nesta versão.
 - Contato por e-mail, mesmo texto de botão no topo e no fim.
+- Fotografias de licença aberta (Wikimedia Commons), com crédito e licença no rodapé. Ilustram os territórios; não são registros dos trabalhos.
 - Sem números inventados, sem depoimentos, sem logotipos de terceiros.
 - Indexação em buscadores bloqueada até a aprovação do conteúdo.
 

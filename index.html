@@ -7,7 +7,7 @@
 <meta name="description" content="A Limber Social faz pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais, com trabalho de campo no Norte e no Nordeste do Brasil.">
 <!-- Versão de teste: indexação bloqueada até a aprovação do conteúdo. Remover esta linha no lançamento. -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#533A6B">
+<meta name="theme-color" content="#2E2140">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Limber Social — medimos o que de fato mudou">
@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="assets/img/monograma-violeta.png">
 <link rel="preload" href="assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/limber.css">
 </head>
 <body>
 
@@ -33,10 +33,10 @@
     <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Seções">
       <a href="#frentes">O que fazemos</a>
-      <a href="#metodo">Método</a>
       <a href="#trabalhos">Trabalhos</a>
+      <a href="#metodo">Método</a>
       <a href="#publicacoes">Publicações</a>
-      <a href="#quem">Quem conduz</a>
+      <a href="#quem">Equipe</a>
       <a class="botao" href="#contato">Falar com a Limber</a>
     </nav>
   </div>
@@ -44,72 +44,20 @@
 
 <main id="conteudo">
 
-  <!-- ============ primeira dobra ============ -->
-  <section class="abre" id="inicio">
-    <div class="miolo abre-grade">
-      <div>
-        <h1 class="titulo-1">Medimos o que de fato mudou<span class="ponto">.</span></h1>
-        <p class="lide">A Limber Social faz pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais. Vamos a campo, estimamos efeitos com métodos de inferência causal e devolvemos os resultados de um jeito que as equipes conseguem usar.</p>
-        <div class="abre-acoes">
-          <a class="botao" href="#contato">Falar com a Limber</a>
-          <a class="link" href="#trabalhos">Ver os trabalhos da equipe</a>
-        </div>
+  <!-- ============ capa ============ -->
+  <section class="capa" id="inicio">
+    <img class="capa-foto" src="assets/img/capa-parque-eolico-rn-1920.webp"
+         srcset="assets/img/capa-parque-eolico-rn-1100.webp 1100w, assets/img/capa-parque-eolico-rn-1920.webp 1920w" sizes="100vw"
+         width="1920" height="1200" alt="Vista aérea de aerogeradores sobre a vegetação do litoral do Rio Grande do Norte" fetchpriority="high">
+    <div class="miolo capa-texto">
+      <h1 class="titulo-1">Medimos o que de fato mudou</h1>
+      <p class="lide">Pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais, com trabalho de campo no Norte e no Nordeste do Brasil.</p>
+      <div class="capa-acoes">
+        <a class="botao botao-claro" href="#contato">Falar com a Limber</a>
+        <a class="link" href="#trabalhos">Ver os trabalhos da equipe</a>
       </div>
-
-      <figure class="grafico">
-        <svg class="anima" viewBox="0 0 640 400" role="img" aria-labelledby="g-titulo g-desc">
-          <title id="g-titulo">Como se mede o efeito de um programa</title>
-          <desc id="g-desc">Esquema com duas linhas ao longo do tempo. Antes do programa, participantes e grupo de comparação evoluem em paralelo. Depois do início, a linha de quem participou sobe mais rápido. Uma linha pontilhada mostra o caminho que os participantes teriam seguido sem o programa. A distância entre a linha real e a pontilhada é o efeito.</desc>
-
-          <!-- eixo e marco do início -->
-          <line class="g-inicio" x1="315" y1="52" x2="315" y2="350"/>
-          <line class="g-eixo" x1="60" y1="350" x2="560" y2="350"/>
-          <text class="g-rotulo" x="315" y="38" text-anchor="middle">início do programa</text>
-          <text class="g-rotulo g-tempo" x="180" y="378" text-anchor="middle">antes</text>
-          <text class="g-rotulo g-tempo" x="450" y="378" text-anchor="middle">depois</text>
-
-          <!-- área do efeito -->
-          <polygon class="g-area g-surge" style="--quando:1.7s" points="270,216 360,180 450,142 540,108 540,180 450,192 360,204"/>
-
-          <!-- grupo de comparação -->
-          <polyline class="g-linha g-comparacao g-traco" pathLength="1" points="90,300 180,288 270,276 360,264 450,252 540,240"/>
-          <g class="g-pt-comparacao">
-            <circle cx="90" cy="300" r="5.5"/><circle cx="180" cy="288" r="5.5"/><circle cx="270" cy="276" r="5.5"/>
-            <circle cx="360" cy="264" r="5.5"/><circle cx="450" cy="252" r="5.5"/><circle cx="540" cy="240" r="5.5"/>
-          </g>
-          <text class="g-rotulo g-rotulo-linha" x="90" y="328">grupo de comparação</text>
-
-          <!-- contrafactual -->
-          <g class="g-surge" style="--quando:1.5s">
-            <polyline class="g-linha g-contra" points="270,216 360,204 450,192 540,180"/>
-            <g class="g-pt-contra">
-              <circle cx="360" cy="204" r="5.5"/><circle cx="450" cy="192" r="5.5"/><circle cx="540" cy="180" r="5.5"/>
-            </g>
-            <text class="g-rotulo g-rotulo-linha" x="372" y="230">sem o programa</text>
-          </g>
-
-          <!-- quem participou -->
-          <polyline class="g-linha g-programa g-traco" pathLength="1" points="90,240 180,228 270,216 360,180 450,142 540,108"/>
-          <g class="g-pt-programa">
-            <circle cx="90" cy="240" r="6"/><circle cx="180" cy="228" r="6"/><circle cx="270" cy="216" r="6"/>
-            <circle cx="360" cy="180" r="6"/><circle cx="450" cy="142" r="6"/><circle cx="540" cy="108" r="6"/>
-          </g>
-          <text class="g-rotulo-forte g-rotulo-linha" x="90" y="208">quem participou</text>
-
-          <!-- efeito -->
-          <g class="g-surge" style="--quando:2.1s">
-            <path class="g-chave" d="M556,108 h10 v72 h-10"/>
-            <text class="g-efeito" x="578" y="150">efeito</text>
-          </g>
-        </svg>
-        <ul class="legenda" aria-hidden="true">
-          <li class="legenda-programa">quem participou</li>
-          <li class="legenda-comparacao">grupo de comparação</li>
-          <li class="legenda-contra">sem o programa</li>
-        </ul>
-        <figcaption>O efeito de um programa é a distância entre o que aconteceu e o que teria acontecido sem ele. Esquema ilustrativo de diferença em diferenças.</figcaption>
-      </figure>
     </div>
+    <p class="capa-legenda">Parque eólico Cutia, Rio Grande do Norte. Foto: Copel</p>
   </section>
 
   <!-- ============ financiadores ============ -->
@@ -133,143 +81,138 @@
   <section class="bloco" id="frentes">
     <div class="miolo">
       <div class="bloco-cabeca">
-        <h2 class="titulo-2">Quatro frentes, um mesmo rigor<span class="ponto">.</span></h2>
+        <h2 class="titulo-2">Quatro frentes, um mesmo rigor</h2>
         <p class="lide">Cada trabalho combina o que o problema pede. Uma avaliação de impacto começa com boa pesquisa de campo e só vale a pena se o resultado chegar a quem decide.</p>
       </div>
 
       <div class="frentes">
         <article class="frente">
-          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="12" cy="44" r="5" fill="#D08DA0"/><circle cx="26" cy="30" r="5" fill="#191817"/>
-            <circle cx="24" cy="52" r="5" fill="#533A6B"/><circle cx="40" cy="40" r="5" fill="#D08DA0"/>
-            <circle cx="44" cy="18" r="5" fill="#533A6B"/><circle cx="54" cy="30" r="5" fill="#191817"/>
-          </svg>
           <h3 class="frente-nome">Pesquisa</h3>
-          <div class="frente-texto">
-            <p class="frente-promessa">Desenho amostral, instrumentos e linha de base.</p>
-            <p>Planejamos a amostra, escrevemos os questionários e os roteiros, treinamos a equipe e acompanhamos a coleta em campo, com controle de qualidade dos dados desde o primeiro dia.</p>
-            <ul class="frente-metodos">
-              <li>Questionários domiciliares</li><li>Amostragem estratificada</li><li>Entrevistas e rodas de conversa</li><li>Coleta digital em campo</li><li>Análise de dados oficiais</li>
-            </ul>
-          </div>
+          <p class="frente-promessa">Desenho amostral, instrumentos e linha de base.</p>
+          <p class="frente-descricao">Planejamos a amostra, escrevemos questionários e roteiros, treinamos a equipe e acompanhamos a coleta, com controle de qualidade desde o primeiro dia.</p>
+          <ul class="frente-metodos">
+            <li>Questionários domiciliares</li>
+            <li>Amostragem estratificada</li>
+            <li>Entrevistas e rodas de conversa</li>
+            <li>Análise de dados oficiais</li>
+          </ul>
         </article>
 
         <article class="frente">
-          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
-            <polyline points="8,46 24,38 40,42 56,24" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="8" cy="46" r="5" fill="#191817"/><circle cx="24" cy="38" r="5" fill="#191817"/>
-            <circle cx="40" cy="42" r="5" fill="#191817"/><circle cx="56" cy="24" r="5" fill="#533A6B"/>
-          </svg>
           <h3 class="frente-nome">Monitoramento</h3>
-          <div class="frente-texto">
-            <p class="frente-promessa">Indicadores e painéis para ajustar a rota cedo.</p>
-            <p>Partimos da teoria da mudança do programa para definir poucos indicadores que importam, montar a rotina de coleta e entregar painéis que a equipe abre toda semana.</p>
-            <ul class="frente-metodos">
-              <li>Teoria da mudança</li><li>Matriz de indicadores</li><li>Painéis interativos</li><li>Mapas e análise de redes</li>
-            </ul>
-          </div>
+          <p class="frente-promessa">Indicadores e painéis para ajustar a rota cedo.</p>
+          <p class="frente-descricao">Partimos da teoria da mudança para definir poucos indicadores que importam, montar a rotina de coleta e entregar painéis que a equipe usa.</p>
+          <ul class="frente-metodos">
+            <li>Teoria da mudança</li>
+            <li>Matriz de indicadores</li>
+            <li>Painéis interativos</li>
+            <li>Mapas e análise de redes</li>
+          </ul>
         </article>
 
         <article class="frente">
-          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
-            <polyline points="8,50 30,44 52,38" fill="none" stroke="#D08DA0" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
-            <polyline points="8,50 30,44 52,14" fill="none" stroke="#533A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="30" cy="44" r="5" fill="#533A6B"/>
-            <path d="M57,14 h4 v24 h-4" fill="none" stroke="#6FA28F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
           <h3 class="frente-nome">Avaliação</h3>
-          <div class="frente-texto">
-            <p class="frente-promessa">Inferência causal para medir o que de fato mudou.</p>
-            <p>Escolhemos o desenho que os dados e o calendário do programa permitem e dizemos com clareza o que ele consegue e o que não consegue afirmar.</p>
-            <ul class="frente-metodos">
-              <li>Diferença em diferenças</li><li>Pareamento</li><li>Regressão descontínua</li><li>Variáveis instrumentais</li><li>Estudos longitudinais</li><li>Retorno social do investimento</li>
-            </ul>
-          </div>
+          <p class="frente-promessa">Inferência causal para medir o que de fato mudou.</p>
+          <p class="frente-descricao">Escolhemos o desenho que os dados e o calendário do programa permitem e dizemos com clareza o que ele consegue afirmar.</p>
+          <ul class="frente-metodos">
+            <li>Diferença em diferenças</li>
+            <li>Pareamento</li>
+            <li>Regressão descontínua</li>
+            <li>Retorno social do investimento</li>
+          </ul>
         </article>
 
         <article class="frente">
-          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
-            <polyline points="8,40 30,40" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round"/>
-            <polyline points="30,40 54,40" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.5"/>
-            <polyline points="30,40 54,16" fill="none" stroke="#6FA28F" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="30" cy="40" r="5" fill="#191817"/><circle cx="54" cy="16" r="5" fill="#6FA28F"/>
-          </svg>
           <h3 class="frente-nome">Aprendizagem</h3>
-          <div class="frente-texto">
-            <p class="frente-promessa">Evidência que vira decisão com as equipes.</p>
-            <p>Devolvemos os achados em oficinas, sumários executivos e notas de política, e formamos as equipes para ler e produzir os próprios números.</p>
-            <ul class="frente-metodos">
-              <li>Oficinas de devolutiva</li><li>Sumários executivos</li><li>Notas de política</li><li>Formação em análise de dados</li>
-            </ul>
-          </div>
+          <p class="frente-promessa">Evidência que vira decisão com as equipes.</p>
+          <p class="frente-descricao">Devolvemos os achados em oficinas, sumários executivos e notas de política, e formamos as equipes para ler e produzir os próprios números.</p>
+          <ul class="frente-metodos">
+            <li>Oficinas de devolutiva</li>
+            <li>Sumários executivos</li>
+            <li>Notas de política</li>
+            <li>Formação em análise de dados</li>
+          </ul>
         </article>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ método ============ -->
-  <section class="bloco faixa-lavanda" id="metodo">
-    <div class="miolo">
-      <div class="bloco-cabeca">
-        <h2 class="titulo-2">Do alinhamento à devolutiva<span class="ponto">.</span></h2>
-        <p class="lide">Uma avaliação passa por cinco etapas. O plano de trabalho detalha os prazos de cada uma com quem contrata.</p>
-      </div>
-      <ol class="etapas">
-        <li class="etapa">
-          <span class="etapa-numero" aria-hidden="true"></span>
-          <h3 class="titulo-3">Alinhamento</h3>
-          <p>Reunião de partida, leitura dos documentos do programa e plano de trabalho com perguntas de avaliação fechadas.</p>
-        </li>
-        <li class="etapa">
-          <span class="etapa-numero" aria-hidden="true"></span>
-          <h3 class="titulo-3">Desenho</h3>
-          <p>Estratégia de identificação, amostragem e instrumentos de coleta, validados antes de ir a campo.</p>
-        </li>
-        <li class="etapa">
-          <span class="etapa-numero" aria-hidden="true"></span>
-          <h3 class="titulo-3">Campo</h3>
-          <p>Coleta com equipe treinada, supervisão diária e controle de qualidade dos dados.</p>
-        </li>
-        <li class="etapa">
-          <span class="etapa-numero" aria-hidden="true"></span>
-          <h3 class="titulo-3">Análise</h3>
-          <p>Estimação dos efeitos, testes de robustez e registro das limitações do estudo.</p>
-        </li>
-        <li class="etapa">
-          <span class="etapa-numero" aria-hidden="true"></span>
-          <h3 class="titulo-3">Devolutiva</h3>
-          <p>Oficina com a equipe do programa, relatório final e sumário executivo com recomendações.</p>
-        </li>
-      </ol>
     </div>
   </section>
 
   <!-- ============ trabalhos ============ -->
-  <section class="bloco" id="trabalhos">
+  <section class="bloco faixa-neblina" id="trabalhos">
     <div class="miolo">
       <div class="bloco-cabeca">
-        <h2 class="titulo-2">Trabalhos da equipe<span class="ponto">.</span></h2>
-        <p class="lide">Avaliações, diagnósticos e sistemas de monitoramento em que a equipe da Limber atuou desde 2020, a maior parte no Norte e no Nordeste do Brasil.</p>
+        <h2 class="titulo-2">Trabalhos da equipe</h2>
+        <p class="lide">Avaliações, diagnósticos e sistemas de monitoramento em que a equipe da Limber atuou, a maior parte no Norte e no Nordeste do Brasil.</p>
       </div>
 
-      <div class="filtros" role="group" aria-label="Filtrar trabalhos por frente">
-        <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
-        <button class="filtro" type="button" data-filtro="pesquisa" aria-pressed="false">Pesquisa</button>
-        <button class="filtro" type="button" data-filtro="monitoramento" aria-pressed="false">Monitoramento</button>
-        <button class="filtro" type="button" data-filtro="avaliacao" aria-pressed="false">Avaliação</button>
-        <button class="filtro" type="button" data-filtro="aprendizagem" aria-pressed="false">Aprendizagem</button>
-      </div>
-      <p class="contagem" id="contagem" aria-live="polite">19 trabalhos</p>
+      <div class="destaques">
+        <article class="destaque">
+          <figure class="destaque-foto">
+            <img src="assets/img/manaus-igarape-1200.webp" srcset="assets/img/manaus-igarape-640.webp 640w, assets/img/manaus-igarape-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Igarapé canalizado entre duas vias, com casas à direita e prédios ao fundo">
+            <figcaption class="destaque-local">Igarapé do Mestre Chico, Manaus</figcaption>
+          </figure>
+          <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2025–2026</span></p>
+          <h3 class="titulo-3">PROSAMIN+, Manaus</h3>
+          <p class="destaque-texto">Avaliação de impacto e estudo longitudinal dos reassentamentos do programa de saneamento dos igarapés.</p>
+          <p class="destaque-fin">Banco Interamericano de Desenvolvimento e Governo do Amazonas</p>
+        </article>
 
-      <table class="trabalhos">
-        <thead>
-          <tr>
-            <th scope="col">Período</th>
-            <th scope="col">Trabalho</th>
-            <th scope="col">Financiador</th>
-            <th scope="col">Frente</th>
-          </tr>
-        </thead>
+        <article class="destaque">
+          <figure class="destaque-foto">
+            <img src="assets/img/maranhao-babacu-1200.webp" srcset="assets/img/maranhao-babacu-640.webp 640w, assets/img/maranhao-babacu-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Palmeiras de babaçu adultas e jovens em área rural">
+            <figcaption class="destaque-local">Babaçual no Maranhão</figcaption>
+          </figure>
+          <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2026</span></p>
+          <h3 class="titulo-3">PAGES, Maranhão</h3>
+          <p class="destaque-texto">Estratégia de identificação causal por pareamento e plano amostral da linha de base com comunidades rurais.</p>
+          <p class="destaque-fin">Fundo Internacional de Desenvolvimento Agrícola</p>
+        </article>
+
+        <article class="destaque">
+          <figure class="destaque-foto">
+            <img src="assets/img/bahia-semiarido-1200.webp" srcset="assets/img/bahia-semiarido-640.webp 640w, assets/img/bahia-semiarido-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Plantação de palma forrageira com cisterna e casa ao fundo">
+            <figcaption class="destaque-local">Cultivo de palma em Serra Preta, Bahia</figcaption>
+          </figure>
+          <p class="destaque-meta"><span class="selo selo-avaliacao">Avaliação</span><span>2022–2023</span></p>
+          <h3 class="titulo-3">Bahia Produtiva</h3>
+          <p class="destaque-texto">Avaliação de resultados do programa de desenvolvimento rural do estado.</p>
+          <p class="destaque-fin">Banco Mundial e Governo da Bahia</p>
+        </article>
+
+        <article class="destaque">
+          <figure class="destaque-foto">
+            <img src="assets/img/rn-rio-do-fogo-1200.webp" srcset="assets/img/rn-rio-do-fogo-640.webp 640w, assets/img/rn-rio-do-fogo-1200.webp 1200w" sizes="(max-width: 620px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="Estrada de terra em curva com fileira de aerogeradores ao fundo">
+            <figcaption class="destaque-local">Rio do Fogo, Rio Grande do Norte</figcaption>
+          </figure>
+          <p class="destaque-meta"><span class="selo selo-pesquisa">Pesquisa</span><span>2025–2026</span></p>
+          <h3 class="titulo-3">Oportunidades para o Nordeste</h3>
+          <p class="destaque-texto">35 entrevistas sobre a transição energética, matriz de sistematização, painéis de visualização e análise de redes.</p>
+          <p class="destaque-fin">Instituto Climate Ventures e Instituto Clima e Sociedade</p>
+        </article>
+      </div>
+
+      <div class="todos">
+        <div class="todos-cabeca">
+          <h3 class="titulo-3">Todos os trabalhos</h3>
+          <div class="filtros" role="group" aria-label="Filtrar trabalhos por frente">
+            <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-filtro="pesquisa" aria-pressed="false">Pesquisa</button>
+            <button class="filtro" type="button" data-filtro="monitoramento" aria-pressed="false">Monitoramento</button>
+            <button class="filtro" type="button" data-filtro="avaliacao" aria-pressed="false">Avaliação</button>
+            <button class="filtro" type="button" data-filtro="aprendizagem" aria-pressed="false">Aprendizagem</button>
+          </div>
+        </div>
+        <p class="contagem" id="contagem" aria-live="polite">19 trabalhos</p>
+
+        <table class="trabalhos">
+          <thead>
+            <tr>
+              <th scope="col">Período</th>
+              <th scope="col">Trabalho</th>
+              <th scope="col">Financiador</th>
+              <th scope="col">Frente</th>
+            </tr>
+          </thead>
         <tbody>
           <tr data-frente="pesquisa">
             <td class="t-ano">2025–2026</td>
@@ -386,17 +329,89 @@
             <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
           </tr>
         </tbody>
-      </table>
-      <p class="trabalhos-nota">A lista reúne trabalhos conduzidos por integrantes da equipe. Parte deles foi executada em parceria com outras consultorias e organizações.</p>
+        </table>
+        <p class="trabalhos-nota">A lista reúne trabalhos conduzidos por integrantes da equipe. Parte deles foi executada em parceria com outras consultorias e organizações.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ método ============ -->
+  <section class="bloco" id="metodo">
+    <div class="miolo metodo-grade">
+      <figure class="grafico">
+        <svg viewBox="0 0 640 400" role="img" aria-labelledby="g-titulo g-desc">
+          <title id="g-titulo">Como se mede o efeito de um programa</title>
+          <desc id="g-desc">Esquema com duas linhas ao longo do tempo. Antes do programa, participantes e grupo de comparação evoluem em paralelo. Depois do início, a linha de quem participou sobe mais rápido. Uma linha pontilhada mostra o caminho que os participantes teriam seguido sem o programa. A distância entre a linha real e a pontilhada é o efeito.</desc>
+          <line class="g-inicio" x1="315" y1="52" x2="315" y2="350"/>
+          <line class="g-eixo" x1="60" y1="350" x2="560" y2="350"/>
+          <text class="g-rotulo" x="315" y="38" text-anchor="middle">início do programa</text>
+          <text class="g-rotulo g-tempo" x="180" y="378" text-anchor="middle">antes</text>
+          <text class="g-rotulo g-tempo" x="450" y="378" text-anchor="middle">depois</text>
+          <polygon class="g-area" points="270,216 360,180 450,142 540,108 540,180 450,192 360,204"/>
+          <polyline class="g-linha g-comparacao" points="90,300 180,288 270,276 360,264 450,252 540,240"/>
+          <g class="g-pt-comparacao">
+            <circle cx="90" cy="300" r="5.5"/><circle cx="180" cy="288" r="5.5"/><circle cx="270" cy="276" r="5.5"/>
+            <circle cx="360" cy="264" r="5.5"/><circle cx="450" cy="252" r="5.5"/><circle cx="540" cy="240" r="5.5"/>
+          </g>
+          <text class="g-rotulo g-rotulo-linha" x="90" y="328">grupo de comparação</text>
+          <g>
+            <polyline class="g-linha g-contra" points="270,216 360,204 450,192 540,180"/>
+            <g class="g-pt-contra">
+              <circle cx="360" cy="204" r="5.5"/><circle cx="450" cy="192" r="5.5"/><circle cx="540" cy="180" r="5.5"/>
+            </g>
+            <text class="g-rotulo g-rotulo-linha" x="378" y="234">sem o programa</text>
+          </g>
+          <polyline class="g-linha g-programa" points="90,240 180,228 270,216 360,180 450,142 540,108"/>
+          <g class="g-pt-programa">
+            <circle cx="90" cy="240" r="6"/><circle cx="180" cy="228" r="6"/><circle cx="270" cy="216" r="6"/>
+            <circle cx="360" cy="180" r="6"/><circle cx="450" cy="142" r="6"/><circle cx="540" cy="108" r="6"/>
+          </g>
+          <text class="g-rotulo-forte g-rotulo-linha" x="90" y="208">quem participou</text>
+          <g>
+            <path class="g-chave" d="M556,108 h10 v72 h-10"/>
+            <text class="g-efeito" x="578" y="150">efeito</text>
+          </g>
+        </svg>
+        <ul class="legenda" aria-hidden="true">
+          <li class="legenda-programa">quem participou</li>
+          <li class="legenda-comparacao">grupo de comparação</li>
+          <li class="legenda-contra">sem o programa</li>
+        </ul>
+        <figcaption><b>Como se mede o efeito de um programa.</b> O efeito é a distância entre o que aconteceu com quem participou e o que teria acontecido sem o programa. Esquema ilustrativo de diferença em diferenças.</figcaption>
+      </figure>
+
+      <div>
+        <h2 class="titulo-2">Do alinhamento à devolutiva</h2>
+        <p class="lide metodo-lide">Uma avaliação passa por cinco etapas. O plano de trabalho detalha os prazos de cada uma com quem contrata.</p>
+        <ol class="etapas">
+          <li class="etapa"><div><h3 class="titulo-3">Alinhamento</h3><p>Reunião de partida, leitura dos documentos do programa e perguntas de avaliação fechadas.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Desenho</h3><p>Estratégia de identificação, amostragem e instrumentos, validados antes de ir a campo.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Campo</h3><p>Coleta com equipe treinada, supervisão diária e controle de qualidade dos dados.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Análise</h3><p>Estimação dos efeitos, testes de robustez e registro das limitações do estudo.</p></div></li>
+          <li class="etapa"><div><h3 class="titulo-3">Devolutiva</h3><p>Oficina com a equipe do programa, relatório final e sumário executivo com recomendações.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ território ============ -->
+  <section class="territorio" aria-labelledby="territorio-titulo">
+    <img src="assets/img/paraiba-semiarido-1920.webp" srcset="assets/img/paraiba-semiarido-1100.webp 1100w, assets/img/paraiba-semiarido-1920.webp 1920w" sizes="100vw" width="1920" height="783" loading="lazy" alt="Vale verde do Semiárido visto do alto de um lajedo, sob céu nublado">
+    <div class="miolo">
+      <div class="territorio-texto">
+        <h2 class="titulo-2" id="territorio-titulo">Do Semiárido à Amazônia</h2>
+        <p>A equipe trabalha onde os programas acontecem: comunidades rurais do Semiárido, cooperativas da agricultura familiar no Maranhão e no Pará, bairros de Manaus às margens dos igarapés. Conhecer o território muda a pergunta de pesquisa, o questionário e a leitura dos resultados.</p>
+        <p class="territorio-legenda">Zona rural de Malta, Paraíba. Foto: UsuárioPar</p>
+      </div>
     </div>
   </section>
 
   <!-- ============ publicações ============ -->
-  <section class="bloco faixa-branca" id="publicacoes">
+  <section class="bloco" id="publicacoes">
     <div class="miolo duas">
       <div>
-        <h2 class="titulo-2">Pesquisa que passa por revisão de pares<span class="ponto">.</span></h2>
-        <p class="lide">A equipe também publica. Os mesmos métodos que usamos nas avaliações são testados em congressos e periódicos de economia e desenvolvimento rural.</p>
+        <h2 class="titulo-2">Pesquisa que passa por revisão de pares</h2>
+        <p class="lide">A equipe também publica. Os métodos usados nas avaliações são testados em congressos e periódicos de economia e desenvolvimento rural.</p>
         <p class="abaixo"><a class="link" href="https://lucasfernandes-eco.github.io/" rel="noopener">Ver a lista completa de publicações</a></p>
       </div>
       <ul class="publicacoes">
@@ -424,11 +439,11 @@
     </div>
   </section>
 
-  <!-- ============ quem conduz ============ -->
-  <section class="bloco" id="quem">
+  <!-- ============ equipe ============ -->
+  <section class="bloco faixa-neblina" id="quem">
     <div class="miolo duas">
-      <h2 class="titulo-2">Quem conduz o trabalho<span class="ponto">.</span></h2>
-      <div class="pessoa">
+      <h2 class="titulo-2">Quem conduz o trabalho</h2>
+      <div>
         <h3 class="pessoa-nome">Lucas Fernandes</h3>
         <p class="pessoa-papel">Sócio-administrador e responsável técnico</p>
         <div class="pessoa-bio">
@@ -446,19 +461,49 @@
 
   <!-- ============ contato ============ -->
   <section class="contato sobre-noite" id="contato">
-    <div class="miolo">
-      <h2 class="titulo-1">Vamos conversar<span class="ponto">?</span></h2>
-      <p class="lide">Conte o que você precisa avaliar, acompanhar ou pesquisar. Se já houver um termo de referência, pode enviar junto.</p>
-      <a class="botao botao-claro" href="mailto:limbersocial@gmail.com?subject=Contato%20pelo%20site%20da%20Limber%20Social">Escrever para limbersocial@gmail.com</a>
+    <div class="miolo contato-grade">
+      <div>
+        <h2 class="titulo-1">Vamos conversar?</h2>
+        <p class="lide">Conte o que você precisa avaliar, acompanhar ou pesquisar. Se já houver um termo de referência, pode enviar junto.</p>
+      </div>
+      <div>
+        <a class="botao botao-claro" href="mailto:limbersocial@gmail.com?subject=Contato%20pelo%20site%20da%20Limber%20Social">Escrever para limbersocial@gmail.com</a>
+        <p class="contato-dado">Natal, Rio Grande do Norte</p>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="rodape">
-  <div class="miolo rodape-linha">
-    <img src="assets/img/logo-horizontal-branca.png" alt="Limber Social" width="173" height="26">
-    <p>Limber Pesquisas Socioeconômicas LTDA, CNPJ 61.019.077/0001-06. Rio Grande do Norte, Brasil.</p>
+  <div class="miolo rodape-grade">
+    <div>
+      <img src="assets/img/logo-horizontal-branca.png" alt="Limber Social" width="173" height="26">
+      <p class="rodape-legal">Limber Pesquisas Socioeconômicas LTDA<br>CNPJ 61.019.077/0001-06</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <h2>Nesta página</h2>
+      <ul>
+        <li><a href="#frentes">O que fazemos</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#publicacoes">Publicações</a></li>
+        <li><a href="#quem">Equipe</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="creditos">
+      <h2>Créditos das imagens</h2>
+      <ul>
+        <li>Parque eólico Cutia: Copel, <a href="https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br" rel="noopener license">CC0</a>.</li>
+        <li>Igarapé do Mestre Chico: MI GENERAL ZAPATA, <a href="https://commons.wikimedia.org/wiki/File:Igarap%C3%A9_do_Mestre_Chico.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br" rel="noopener license">CC BY-SA 3.0</a>.</li>
+        <li>Babaçual no Maranhão: Marcelo Cavallari, <a href="https://commons.wikimedia.org/wiki/File:A._speciosa_colonization.JPG" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="noopener license">CC BY-SA 4.0</a>.</li>
+        <li>Cultivo de palma em Serra Preta: Sergio Amaral, Ministério do Desenvolvimento Social, <a href="https://commons.wikimedia.org/wiki/File:Planta%C3%A7%C3%A3o_no_semi%C3%A1rido_(16077580847).jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.pt-br" rel="noopener license">CC BY-SA 2.0</a>.</li>
+        <li>Parque eólico de Rio do Fogo: Fabiogurgelamaral, <a href="https://commons.wikimedia.org/wiki/File:Parque_E%C3%B3lico_de_Rio_do_Fogo.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br" rel="noopener license">CC BY-SA 3.0</a>.</li>
+        <li>Zona rural de Malta: UsuárioPar, <a href="https://commons.wikimedia.org/wiki/File:Por_do_Sol_na_Zona_Rural_de_Malta_PB.jpg" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="noopener license">CC BY-SA 4.0</a>.</li>
+        <li>As imagens foram recortadas e tiveram a cor ajustada. As fotografias ilustram os territórios e não são registros dos trabalhos listados.</li>
+      </ul>
+    </div>
   </div>
 </footer>
 
