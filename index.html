@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limber Social — pesquisa, monitoramento e avaliação de programas</title>
+<meta name="description" content="A Limber Social faz pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais, com trabalho de campo no Norte e no Nordeste do Brasil.">
+<!-- Versão de teste: indexação bloqueada até a aprovação do conteúdo. Remover esta linha no lançamento. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#533A6B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Limber Social — medimos o que de fato mudou">
+<meta property="og:description" content="Pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais.">
+<meta property="og:image" content="assets/img/compartilhar.png">
+<link rel="icon" type="image/png" href="assets/img/monograma-violeta.png">
+<link rel="apple-touch-icon" href="assets/img/monograma-violeta.png">
+<link rel="preload" href="assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+<div class="aviso">
+  <div class="miolo">Versão de teste. O conteúdo desta página ainda está em revisão.</div>
+</div>
+
+<header class="topo">
+  <div class="miolo topo-linha">
+    <a class="marca" href="#inicio" aria-label="Limber Social, início"><b>limber</b> social<i>.</i></a>
+    <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Seções">
+      <a href="#frentes">O que fazemos</a>
+      <a href="#metodo">Método</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#publicacoes">Publicações</a>
+      <a href="#quem">Quem conduz</a>
+      <a class="botao" href="#contato">Falar com a Limber</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ primeira dobra ============ -->
+  <section class="abre" id="inicio">
+    <div class="miolo abre-grade">
+      <div>
+        <h1 class="titulo-1">Medimos o que de fato mudou<span class="ponto">.</span></h1>
+        <p class="lide">A Limber Social faz pesquisa, monitoramento e avaliação de programas sociais, rurais e ambientais. Vamos a campo, estimamos efeitos com métodos de inferência causal e devolvemos os resultados de um jeito que as equipes conseguem usar.</p>
+        <div class="abre-acoes">
+          <a class="botao" href="#contato">Falar com a Limber</a>
+          <a class="link" href="#trabalhos">Ver os trabalhos da equipe</a>
+        </div>
+      </div>
+
+      <figure class="grafico">
+        <svg class="anima" viewBox="0 0 640 400" role="img" aria-labelledby="g-titulo g-desc">
+          <title id="g-titulo">Como se mede o efeito de um programa</title>
+          <desc id="g-desc">Esquema com duas linhas ao longo do tempo. Antes do programa, participantes e grupo de comparação evoluem em paralelo. Depois do início, a linha de quem participou sobe mais rápido. Uma linha pontilhada mostra o caminho que os participantes teriam seguido sem o programa. A distância entre a linha real e a pontilhada é o efeito.</desc>
+
+          <!-- eixo e marco do início -->
+          <line class="g-inicio" x1="315" y1="52" x2="315" y2="350"/>
+          <line class="g-eixo" x1="60" y1="350" x2="560" y2="350"/>
+          <text class="g-rotulo" x="315" y="38" text-anchor="middle">início do programa</text>
+          <text class="g-rotulo g-tempo" x="180" y="378" text-anchor="middle">antes</text>
+          <text class="g-rotulo g-tempo" x="450" y="378" text-anchor="middle">depois</text>
+
+          <!-- área do efeito -->
+          <polygon class="g-area g-surge" style="--quando:1.7s" points="270,216 360,180 450,142 540,108 540,180 450,192 360,204"/>
+
+          <!-- grupo de comparação -->
+          <polyline class="g-linha g-comparacao g-traco" pathLength="1" points="90,300 180,288 270,276 360,264 450,252 540,240"/>
+          <g class="g-pt-comparacao">
+            <circle cx="90" cy="300" r="5.5"/><circle cx="180" cy="288" r="5.5"/><circle cx="270" cy="276" r="5.5"/>
+            <circle cx="360" cy="264" r="5.5"/><circle cx="450" cy="252" r="5.5"/><circle cx="540" cy="240" r="5.5"/>
+          </g>
+          <text class="g-rotulo g-rotulo-linha" x="90" y="328">grupo de comparação</text>
+
+          <!-- contrafactual -->
+          <g class="g-surge" style="--quando:1.5s">
+            <polyline class="g-linha g-contra" points="270,216 360,204 450,192 540,180"/>
+            <g class="g-pt-contra">
+              <circle cx="360" cy="204" r="5.5"/><circle cx="450" cy="192" r="5.5"/><circle cx="540" cy="180" r="5.5"/>
+            </g>
+            <text class="g-rotulo g-rotulo-linha" x="372" y="230">sem o programa</text>
+          </g>
+
+          <!-- quem participou -->
+          <polyline class="g-linha g-programa g-traco" pathLength="1" points="90,240 180,228 270,216 360,180 450,142 540,108"/>
+          <g class="g-pt-programa">
+            <circle cx="90" cy="240" r="6"/><circle cx="180" cy="228" r="6"/><circle cx="270" cy="216" r="6"/>
+            <circle cx="360" cy="180" r="6"/><circle cx="450" cy="142" r="6"/><circle cx="540" cy="108" r="6"/>
+          </g>
+          <text class="g-rotulo-forte g-rotulo-linha" x="90" y="208">quem participou</text>
+
+          <!-- efeito -->
+          <g class="g-surge" style="--quando:2.1s">
+            <path class="g-chave" d="M556,108 h10 v72 h-10"/>
+            <text class="g-efeito" x="578" y="150">efeito</text>
+          </g>
+        </svg>
+        <ul class="legenda" aria-hidden="true">
+          <li class="legenda-programa">quem participou</li>
+          <li class="legenda-comparacao">grupo de comparação</li>
+          <li class="legenda-contra">sem o programa</li>
+        </ul>
+        <figcaption>O efeito de um programa é a distância entre o que aconteceu e o que teria acontecido sem ele. Esquema ilustrativo de diferença em diferenças.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ financiadores ============ -->
+  <section class="quem-financia" aria-label="Financiadores">
+    <div class="miolo quem-financia-grade">
+      <p>A equipe já avaliou e acompanhou programas financiados por</p>
+      <ul>
+        <li>Banco Mundial</li>
+        <li>Banco Interamericano de Desenvolvimento</li>
+        <li>Fundo Internacional de Desenvolvimento Agrícola</li>
+        <li>UNICEF</li>
+        <li>Consórcio Nordeste</li>
+        <li>The Nature Conservancy</li>
+        <li>Instituto Climate Ventures</li>
+        <li>Petrobras Socioambiental</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ frentes ============ -->
+  <section class="bloco" id="frentes">
+    <div class="miolo">
+      <div class="bloco-cabeca">
+        <h2 class="titulo-2">Quatro frentes, um mesmo rigor<span class="ponto">.</span></h2>
+        <p class="lide">Cada trabalho combina o que o problema pede. Uma avaliação de impacto começa com boa pesquisa de campo e só vale a pena se o resultado chegar a quem decide.</p>
+      </div>
+
+      <div class="frentes">
+        <article class="frente">
+          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="12" cy="44" r="5" fill="#D08DA0"/><circle cx="26" cy="30" r="5" fill="#191817"/>
+            <circle cx="24" cy="52" r="5" fill="#533A6B"/><circle cx="40" cy="40" r="5" fill="#D08DA0"/>
+            <circle cx="44" cy="18" r="5" fill="#533A6B"/><circle cx="54" cy="30" r="5" fill="#191817"/>
+          </svg>
+          <h3 class="frente-nome">Pesquisa</h3>
+          <div class="frente-texto">
+            <p class="frente-promessa">Desenho amostral, instrumentos e linha de base.</p>
+            <p>Planejamos a amostra, escrevemos os questionários e os roteiros, treinamos a equipe e acompanhamos a coleta em campo, com controle de qualidade dos dados desde o primeiro dia.</p>
+            <ul class="frente-metodos">
+              <li>Questionários domiciliares</li><li>Amostragem estratificada</li><li>Entrevistas e rodas de conversa</li><li>Coleta digital em campo</li><li>Análise de dados oficiais</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="frente">
+          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
+            <polyline points="8,46 24,38 40,42 56,24" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8" cy="46" r="5" fill="#191817"/><circle cx="24" cy="38" r="5" fill="#191817"/>
+            <circle cx="40" cy="42" r="5" fill="#191817"/><circle cx="56" cy="24" r="5" fill="#533A6B"/>
+          </svg>
+          <h3 class="frente-nome">Monitoramento</h3>
+          <div class="frente-texto">
+            <p class="frente-promessa">Indicadores e painéis para ajustar a rota cedo.</p>
+            <p>Partimos da teoria da mudança do programa para definir poucos indicadores que importam, montar a rotina de coleta e entregar painéis que a equipe abre toda semana.</p>
+            <ul class="frente-metodos">
+              <li>Teoria da mudança</li><li>Matriz de indicadores</li><li>Painéis interativos</li><li>Mapas e análise de redes</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="frente">
+          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
+            <polyline points="8,50 30,44 52,38" fill="none" stroke="#D08DA0" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+            <polyline points="8,50 30,44 52,14" fill="none" stroke="#533A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="44" r="5" fill="#533A6B"/>
+            <path d="M57,14 h4 v24 h-4" fill="none" stroke="#6FA28F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="frente-nome">Avaliação</h3>
+          <div class="frente-texto">
+            <p class="frente-promessa">Inferência causal para medir o que de fato mudou.</p>
+            <p>Escolhemos o desenho que os dados e o calendário do programa permitem e dizemos com clareza o que ele consegue e o que não consegue afirmar.</p>
+            <ul class="frente-metodos">
+              <li>Diferença em diferenças</li><li>Pareamento</li><li>Regressão descontínua</li><li>Variáveis instrumentais</li><li>Estudos longitudinais</li><li>Retorno social do investimento</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="frente">
+          <svg class="frente-glifo" viewBox="0 0 64 64" aria-hidden="true">
+            <polyline points="8,40 30,40" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round"/>
+            <polyline points="30,40 54,40" fill="none" stroke="#191817" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.5"/>
+            <polyline points="30,40 54,16" fill="none" stroke="#6FA28F" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="30" cy="40" r="5" fill="#191817"/><circle cx="54" cy="16" r="5" fill="#6FA28F"/>
+          </svg>
+          <h3 class="frente-nome">Aprendizagem</h3>
+          <div class="frente-texto">
+            <p class="frente-promessa">Evidência que vira decisão com as equipes.</p>
+            <p>Devolvemos os achados em oficinas, sumários executivos e notas de política, e formamos as equipes para ler e produzir os próprios números.</p>
+            <ul class="frente-metodos">
+              <li>Oficinas de devolutiva</li><li>Sumários executivos</li><li>Notas de política</li><li>Formação em análise de dados</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ método ============ -->
+  <section class="bloco faixa-lavanda" id="metodo">
+    <div class="miolo">
+      <div class="bloco-cabeca">
+        <h2 class="titulo-2">Do alinhamento à devolutiva<span class="ponto">.</span></h2>
+        <p class="lide">Uma avaliação passa por cinco etapas. O plano de trabalho detalha os prazos de cada uma com quem contrata.</p>
+      </div>
+      <ol class="etapas">
+        <li class="etapa">
+          <span class="etapa-numero" aria-hidden="true"></span>
+          <h3 class="titulo-3">Alinhamento</h3>
+          <p>Reunião de partida, leitura dos documentos do programa e plano de trabalho com perguntas de avaliação fechadas.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa-numero" aria-hidden="true"></span>
+          <h3 class="titulo-3">Desenho</h3>
+          <p>Estratégia de identificação, amostragem e instrumentos de coleta, validados antes de ir a campo.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa-numero" aria-hidden="true"></span>
+          <h3 class="titulo-3">Campo</h3>
+          <p>Coleta com equipe treinada, supervisão diária e controle de qualidade dos dados.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa-numero" aria-hidden="true"></span>
+          <h3 class="titulo-3">Análise</h3>
+          <p>Estimação dos efeitos, testes de robustez e registro das limitações do estudo.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa-numero" aria-hidden="true"></span>
+          <h3 class="titulo-3">Devolutiva</h3>
+          <p>Oficina com a equipe do programa, relatório final e sumário executivo com recomendações.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ trabalhos ============ -->
+  <section class="bloco" id="trabalhos">
+    <div class="miolo">
+      <div class="bloco-cabeca">
+        <h2 class="titulo-2">Trabalhos da equipe<span class="ponto">.</span></h2>
+        <p class="lide">Avaliações, diagnósticos e sistemas de monitoramento em que a equipe da Limber atuou desde 2020, a maior parte no Norte e no Nordeste do Brasil.</p>
+      </div>
+
+      <div class="filtros" role="group" aria-label="Filtrar trabalhos por frente">
+        <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" type="button" data-filtro="pesquisa" aria-pressed="false">Pesquisa</button>
+        <button class="filtro" type="button" data-filtro="monitoramento" aria-pressed="false">Monitoramento</button>
+        <button class="filtro" type="button" data-filtro="avaliacao" aria-pressed="false">Avaliação</button>
+        <button class="filtro" type="button" data-filtro="aprendizagem" aria-pressed="false">Aprendizagem</button>
+      </div>
+      <p class="contagem" id="contagem" aria-live="polite">19 trabalhos</p>
+
+      <table class="trabalhos">
+        <thead>
+          <tr>
+            <th scope="col">Período</th>
+            <th scope="col">Trabalho</th>
+            <th scope="col">Financiador</th>
+            <th scope="col">Frente</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-frente="pesquisa">
+            <td class="t-ano">2025–2026</td>
+            <th scope="row" class="t-nome"><strong>Plano Brasil Nordeste de Transformação Ecológica</strong><span>Incursões de campo nos estados, avaliação da carteira de iniciativas e estimativas de captação por eixo. <a class="link" href="https://consorcionordeste.gov.br/Plano_Brasil_Nordeste_PTE_DIGITAL.pdf?v=2025-11-10" rel="noopener">Ler o plano publicado</a></span></th>
+            <td class="t-fin">Consórcio Nordeste e Organização dos Estados Ibero-americanos</td>
+            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2026</td>
+            <th scope="row" class="t-nome"><strong>PAGES, Maranhão</strong><span>Estratégia de identificação causal por pareamento e plano amostral da linha de base com comunidades rurais.</span></th>
+            <td class="t-fin">Fundo Internacional de Desenvolvimento Agrícola</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2025–2026</td>
+            <th scope="row" class="t-nome"><strong>PROSAMIN+, Manaus</strong><span>Avaliação de impacto e estudo longitudinal dos reassentamentos do programa de saneamento dos igarapés.</span></th>
+            <td class="t-fin">Banco Interamericano de Desenvolvimento e Governo do Amazonas</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="monitoramento">
+            <td class="t-ano">2026</td>
+            <th scope="row" class="t-nome"><strong>Restauração de paisagens e uso sustentável da terra, Pará</strong><span>Sistemática de monitoramento e avaliação, formulários de coleta em campo e painéis de acompanhamento.</span></th>
+            <td class="t-fin">The Nature Conservancy Brasil</td>
+            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          </tr>
+          <tr data-frente="pesquisa">
+            <td class="t-ano">2025–2026</td>
+            <th scope="row" class="t-nome"><strong>Oportunidades para o Nordeste</strong><span>35 entrevistas sobre a transição energética, matriz de sistematização, painéis de visualização e análise de redes. <a class="link" href="https://www.climateventures.co/programas/oportunidades-para-o-nordeste" rel="noopener">Conhecer o programa</a></span></th>
+            <td class="t-fin">Instituto Climate Ventures e Instituto Clima e Sociedade</td>
+            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          </tr>
+          <tr data-frente="pesquisa">
+            <td class="t-ano">2026</td>
+            <th scope="row" class="t-nome"><strong>Redes Ceará</strong><span>Diagnóstico socioterritorial sobre insegurança alimentar e inclusão produtiva no estado.</span></th>
+            <td class="t-fin">Redes Ceará</td>
+            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          </tr>
+          <tr data-frente="aprendizagem">
+            <td class="t-ano">2026</td>
+            <th scope="row" class="t-nome"><strong>Trilha em Análise de Dados</strong><span>Curso de estatística aplicada para a equipe técnica, com o Laboratório de Métodos Quantitativos da Universidade Federal do Rio Grande do Norte.</span></th>
+            <td class="t-fin">Instituto para o Desenvolvimento do Investimento Social</td>
+            <td class="t-frente"><span class="selo selo-aprendizagem">Aprendizagem</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2025</td>
+            <th scope="row" class="t-nome"><strong>Newton Fund Brasil</strong><span>Estudo de caso nacional sobre os efeitos do fundo em pesquisa, inovação e cooperação internacional.</span></th>
+            <td class="t-fin">Governo do Reino Unido</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2024</td>
+            <th scope="row" class="t-nome"><strong>Lagos do São Francisco</strong><span>Avaliação de retorno social do investimento, com coleta de dados primários.</span></th>
+            <td class="t-fin">Embrapa e Companhia Hidro Elétrica do São Francisco</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2024</td>
+            <th scope="row" class="t-nome"><strong>A União Faz a Vida</strong><span>Avaliação quase-experimental do programa de educação, com microdados do Sistema de Avaliação da Educação Básica.</span></th>
+            <td class="t-fin">Sicredi</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2024</td>
+            <th scope="row" class="t-nome"><strong>Coletivo Online</strong><span>Avaliação de impacto do projeto sobre a empregabilidade de jovens.</span></th>
+            <td class="t-fin">Instituto Coca-Cola Brasil</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="pesquisa">
+            <td class="t-ano">2024</td>
+            <th scope="row" class="t-nome"><strong>Um Milhão de Oportunidades</strong><span>Estudo sobre habilidades e empregos verdes para a juventude.</span></th>
+            <td class="t-fin">UNICEF Brasil</td>
+            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          </tr>
+          <tr data-frente="monitoramento">
+            <td class="t-ano">2024</td>
+            <th scope="row" class="t-nome"><strong>COOPAQ</strong><span>Sistema de monitoramento e avaliação da cooperativa, construído a partir da teoria da mudança.</span></th>
+            <td class="t-fin">COOPAQ</td>
+            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          </tr>
+          <tr data-frente="monitoramento">
+            <td class="t-ano">2023–2024</td>
+            <th scope="row" class="t-nome"><strong>Programa SER</strong><span>Gestão, monitoramento e avaliação de iniciativas de desenvolvimento rural.</span></th>
+            <td class="t-fin">Neoenergia e Banco Nacional de Desenvolvimento Econômico e Social</td>
+            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2022–2023</td>
+            <th scope="row" class="t-nome"><strong>Bahia Produtiva</strong><span>Avaliação de resultados do programa de desenvolvimento rural.</span></th>
+            <td class="t-fin">Banco Mundial e Governo da Bahia</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2022</td>
+            <th scope="row" class="t-nome"><strong>Acesso Mais Seguro</strong><span>Análise quantitativa dos resultados do programa.</span></th>
+            <td class="t-fin">Comitê Internacional da Cruz Vermelha</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="avaliacao">
+            <td class="t-ano">2022</td>
+            <th scope="row" class="t-nome"><strong>No Clima da Caatinga</strong><span>Avaliação de práticas sustentáveis de conservação e restauração no bioma.</span></th>
+            <td class="t-fin">Petrobras Socioambiental</td>
+            <td class="t-frente"><span class="selo selo-avaliacao">Avaliação</span></td>
+          </tr>
+          <tr data-frente="monitoramento">
+            <td class="t-ano">2020–2023</td>
+            <th scope="row" class="t-nome"><strong>Organizações de Produtores para a América Latina</strong><span>Gestão e monitoramento do fortalecimento de organizações da agricultura familiar.</span></th>
+            <td class="t-fin">Fundo Internacional de Desenvolvimento Agrícola e União Europeia</td>
+            <td class="t-frente"><span class="selo selo-monitoramento">Monitoramento</span></td>
+          </tr>
+          <tr data-frente="pesquisa">
+            <td class="t-ano">2020</td>
+            <th scope="row" class="t-nome"><strong>Índice de Desenvolvimento Inclusivo para Cooperativas Solidárias</strong><span>Coordenação do índice que mede a inclusão de mulheres e jovens, publicado como Texto para Discussão do Ipea.</span></th>
+            <td class="t-fin">Trias</td>
+            <td class="t-frente"><span class="selo selo-pesquisa">Pesquisa</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="trabalhos-nota">A lista reúne trabalhos conduzidos por integrantes da equipe. Parte deles foi executada em parceria com outras consultorias e organizações.</p>
+    </div>
+  </section>
+
+  <!-- ============ publicações ============ -->
+  <section class="bloco faixa-branca" id="publicacoes">
+    <div class="miolo duas">
+      <div>
+        <h2 class="titulo-2">Pesquisa que passa por revisão de pares<span class="ponto">.</span></h2>
+        <p class="lide">A equipe também publica. Os mesmos métodos que usamos nas avaliações são testados em congressos e periódicos de economia e desenvolvimento rural.</p>
+        <p class="abaixo"><a class="link" href="https://lucasfernandes-eco.github.io/" rel="noopener">Ver a lista completa de publicações</a></p>
+      </div>
+      <ul class="publicacoes">
+        <li>
+          <h3 class="titulo-3">Seguro para plantar? Um ensaio sobre o impacto do Programa Garantia-Safra</h3>
+          <p>Encontro Nacional de Economia da ANPEC, 2025</p>
+        </li>
+        <li>
+          <h3 class="titulo-3">Água e segurança alimentar durante a seca: estudo em áreas rurais de Medina, no Semiárido do Vale do Jequitinhonha</h3>
+          <p>Artigo em periódico científico</p>
+        </li>
+        <li>
+          <h3 class="titulo-3">A inclusão de mulheres e jovens em cooperativas solidárias brasileiras: uma proposta de índice</h3>
+          <p>Revista Nacional de Administración, 2022</p>
+        </li>
+        <li>
+          <h3 class="titulo-3">Elaboração do índice de desenvolvimento inclusivo para cooperativas solidárias</h3>
+          <p>Texto para Discussão, Ipea, 2020</p>
+        </li>
+        <li>
+          <h3 class="titulo-3">Impactos da expansão de parques eólicos sobre a saúde das mulheres no Semiárido brasileiro</h3>
+          <p>Pesquisa em andamento</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ quem conduz ============ -->
+  <section class="bloco" id="quem">
+    <div class="miolo duas">
+      <h2 class="titulo-2">Quem conduz o trabalho<span class="ponto">.</span></h2>
+      <div class="pessoa">
+        <h3 class="pessoa-nome">Lucas Fernandes</h3>
+        <p class="pessoa-papel">Sócio-administrador e responsável técnico</p>
+        <div class="pessoa-bio">
+          <p>Economista, doutorando em Economia pela Universidade Federal do Rio Grande do Norte e mestre em Planejamento Urbano e Regional pela Universidade Federal de Minas Gerais. Pesquisador colaborador do Laboratório de Estudos Rurais e do Laboratório de Métodos Quantitativos da mesma universidade.</p>
+          <p>Trabalha há mais de dez anos com monitoramento, avaliação e pesquisa aplicada, da agricultura familiar e do cooperativismo solidário a programas de saneamento urbano e de transição energética. Pesquisa os efeitos dos parques eólicos e do Programa Garantia-Safra no Semiárido.</p>
+        </div>
+        <div class="pessoa-links">
+          <a class="link" href="https://lucasfernandes-eco.github.io/" rel="noopener">Página acadêmica</a>
+          <a class="link" href="https://www.linkedin.com/in/lucas-fernandes-0717b52b7/" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="pessoa-equipe">Para cada trabalho, a Limber monta a equipe com pesquisadoras e pesquisadores associados em métodos quantitativos, pesquisa qualitativa e coordenação de campo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ contato ============ -->
+  <section class="contato sobre-noite" id="contato">
+    <div class="miolo">
+      <h2 class="titulo-1">Vamos conversar<span class="ponto">?</span></h2>
+      <p class="lide">Conte o que você precisa avaliar, acompanhar ou pesquisar. Se já houver um termo de referência, pode enviar junto.</p>
+      <a class="botao botao-claro" href="mailto:limbersocial@gmail.com?subject=Contato%20pelo%20site%20da%20Limber%20Social">Escrever para limbersocial@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="miolo rodape-linha">
+    <img src="assets/img/logo-horizontal-branca.png" alt="Limber Social" width="173" height="26">
+    <p>Limber Pesquisas Socioeconômicas LTDA, CNPJ 61.019.077/0001-06. Rio Grande do Norte, Brasil.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
